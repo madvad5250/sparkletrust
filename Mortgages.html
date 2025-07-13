@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkleBank - Mortgage Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero mortgages-hero">
+        <div class="container">
+            <h1>Your Dream Home Starts Here</h1>
+            <p>Competitive mortgage rates tailored to your needs</p>
+            <a href="#mortgage-form" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <section class="mortgage-types">
+        <div class="container">
+            <h2>Our Mortgage Options</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <h3>Fixed Rate Mortgage</h3>
+                    <p>Lock in your rate for 2-10 years with predictable payments</p>
+                    <p class="rate">From 3.5% APR</p>
+                </div>
+                <div class="option-card">
+                    <h3>Adjustable Rate Mortgage</h3>
+                    <p>Lower initial rates that adjust periodically after the initial term</p>
+                    <p class="rate">From 2.9% APR</p>
+                </div>
+                <div class="option-card">
+                    <h3>FHA Loans</h3>
+                    <p>Government-backed loans with lower down payment requirements</p>
+                    <p class="rate">From 3.2% APR</p>
+                </div>
+                <div class="option-card">
+                    <h3>Jumbo Loans</h3>
+                    <p>For higher-value properties that exceed conventional loan limits</p>
+                    <p class="rate">From 4.1% APR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator">
+        <div class="container">
+            <h2>Mortgage Calculator</h2>
+            <div class="calc-container">
+                <div class="calc-form">
+                    <div class="form-group">
+                        <label for="home-value">Home Value ($)</label>
+                        <input type="number" id="home-value" value="300000">
+                    </div>
+                    <div class="form-group">
+                        <label for="down-payment">Down Payment ($)</label>
+                        <input type="number" id="down-payment" value="60000">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-term">Loan Term (years)</label>
+                        <select id="loan-term">
+                            <option value="15">15</option>
+                            <option value="30" selected>30</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest-rate">Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" step="0.01" value="3.5">
+                    </div>
+                </div>
+                <div class="calc-results">
+                    <h3>Estimated Monthly Payment</h3>
+                    <p class="payment-amount">$1,347</p>
+                    <div class="breakdown">
+                        <p>Loan Amount: $240,000</p>
+                        <p>Interest Paid: $144,920</p>
+                        <p>Total Cost: $384,920</p>
+                    </div>
+                    <button class="btn">Get Pre-Approved</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mortgage-form" id="mortgage-form">
+        <div class="container">
+            <h2>Start Your Mortgage Application</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-type">Loan Type</label>
+                        <select id="loan-type" required>
+                            <option value="">Select</option>
+                            <option value="fixed">Fixed Rate</option>
+                            <option value="adjustable">Adjustable Rate</option>
+                            <option value="fha">FHA Loan</option>
+                            <option value="jumbo">Jumbo Loan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="property-address">Property Address (if known)</label>
+                    <input type="text" id="property-address">
+                </div>
+                <div class="form-group">
+                    <label for="credit-range">Estimated Credit Score</label>
+                    <select id="credit-range" required>
+                        <option value="">Select</option>
+                        <option value="excellent">720+ (Excellent)</option>
+                        <option value="good">660-719 (Good)</option>
+                        <option value="fair">620-659 (Fair)</option>
+                        <option value="poor">Below 620 (Poor)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

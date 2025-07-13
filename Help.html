@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - SparkleBank</title>
+    <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero help-hero">
+        <div class="container">
+            <h1>How Can We Help You?</h1>
+            <p>Find answers to your questions or contact our support team</p>
+        </div>
+    </section>
+
+    <section class="help-search">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" placeholder="Search help articles...">
+                <button class="btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-categories">
+        <div class="container">
+            <h2>Browse Help Topics</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h3>Mortgages</h3>
+                    <p>Questions about home loans and applications</p>
+                    <a href="#">View Articles</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💼</div>
+                    <h3>Business Loans</h3>
+                    <p>Information about business financing</p>
+                    <a href="#">View Articles</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🛡️</div>
+                    <h3>Account Security</h3>
+                    <p>Keeping your accounts safe and secure</p>
+                    <a href="#">View Articles</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Online Banking</h3>
+                    <p>Using our digital platforms</p>
+                    <a href="#">View Articles</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💳</div>
+                    <h3>Cards & Payments</h3>
+                    <p>Debit cards, credit cards, and payments</p>
+                    <a href="#">View Articles</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📝</div>
+                    <h3>Applications</h3>
+                    <p>Status checks and requirements</p>
+                    <a href="#">View Articles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I apply for a mortgage?
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can apply for a mortgage online through our website, by phone, or by visiting one of our branches. Our online application takes about 20 minutes to complete, and you'll need information about your income, employment, and the property you're interested in.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What documents do I need for a business loan?
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typically, you'll need: business financial statements (profit/loss, balance sheet), business tax returns (2 years), personal tax returns of owners (2 years), business license, and a debt schedule. Requirements may vary based on loan type and amount.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does loan approval take?
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Mortgage approvals typically take 2-3 weeks after submitting all required documents. Business loans can take 1-4 weeks depending on complexity. You'll receive regular updates throughout the process from your loan officer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I check my application status online?
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, once you've started an application, you can create an online account to track your status, see required documents, and communicate with your loan officer through our secure portal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What are your customer service hours?
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our customer service team is available Monday-Friday 8am-8pm EST and Saturday 9am-5pm EST. You can reach us at 1-800-SPARKLE or through the chat feature on our website and mobile app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-help">
+        <div class="container">
+            <h2>Still Need Help?</h2>
+            <div class="contact-options">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>1-800-SPARKLE</p>
+                    <p>Monday-Friday: 8am-8pm EST</p>
+                    <p>Saturday: 9am-5pm EST</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Available during customer service hours</p>
+                    <button class="btn">Start Chat</button>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>We typically respond within 24 hours</p>
+                    <button class="btn">Send Email</button>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🏢</div>
+                    <h3>Visit a Branch</h3>
+                    <p>Find your nearest SparkleBank location</p>
+                    <button class="btn">Branch Locator</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-form">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="help-name">Full Name</label>
+                        <input type="text" id="help-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="help-email">Email</label>
+                        <input type="email" id="help-email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="help-subject">Subject</label>
+                    <select id="help-subject" required>
+                        <option value="">Select a topic</option>
+                        <option value="mortgage">Mortgage Question</option>
+                        <option value="business-loan">Business Loan Question</option>
+                        <option value="account">Account Inquiry</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="help-message">Message</label>
+                    <textarea id="help-message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

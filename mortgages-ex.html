@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgages - Sparkle Trust Consolidated Bank </title>
+    <meta name="description" content="Manage your mortgage accounts">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="mortgages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Sparkle Trust Consolidated Bank </span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">Edward Lee Cooksey</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li>
+                        <a href="cards.html"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li>
+                        <a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li>
+                        <a href="savings.html"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li class="active">
+                        <a href="mortgages.html"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Mortgages</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Mortgages Content -->
+            <div class="dashboard-content">
+                <!-- Mortgage Overview -->
+                <section class="mortgage-overview">
+                    <div class="overview-header">
+                        <h2>Your Mortgage</h2>
+                        <div class="mortgage-actions">
+                            <button class="button outline-button small">
+                                <i class="fas fa-file-invoice"></i> Statements
+                            </button>
+                            <button class="button outline-button small">
+                                <i class="fas fa-calculator"></i> Overpayment
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mortgage-card">
+                        <div class="mortgage-header">
+                            <div class="property-info">
+                                <div class="property-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="property-details">
+                                    <h3>123 Main Street, London</h3>
+                                    <div class="mortgage-number">Mortgage Account: **** 5678</div>
+                                </div>
+                            </div>
+                            <div class="mortgage-status">
+                                <div class="status-badge active">Active</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mortgage-details">
+                            <div class="detail-row">
+                                <div class="detail-item">
+                                    <div class="detail-label">Outstanding Balance</div>
+                                    <div class="detail-value">£245,750.00</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Original Loan</div>
+                                    <div class="detail-value">£275,000.00</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Interest Rate</div>
+                                    <div class="detail-value">3.75% Fixed</div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-item">
+                                    <div class="detail-label">Monthly Payment</div>
+                                    <div class="detail-value">£1,275.50</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Next Payment Due</div>
+                                    <div class="detail-value">1 May 2023</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Term Remaining</div>
+                                    <div class="detail-value">22 years, 3 months</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mortgage-progress">
+                            <div class="progress-header">
+                                <div class="progress-label">Mortgage Progress</div>
+                                <div class="progress-percentage">10.6% Paid</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 10.6%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Schedule -->
+                <section class="payment-schedule">
+                    <div class="section-header">
+                        <h2>Payment Schedule</h2>
+                        <div class="schedule-filter">
+                            <label for="scheduleFilter">View:</label>
+                            <select id="scheduleFilter">
+                                <option value="upcoming">Upcoming Payments</option>
+                                <option value="past">Past Payments</option>
+                                <option value="all">All Payments</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-table-container">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Payment Amount</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Remaining Balance</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 May 2023</td>
+                                    <td>£1,275.50</td>
+                                    <td>£532.25</td>
+                                    <td>£743.25</td>
+                                    <td>£245,217.75</td>
+                                    <td><span class="payment-status upcoming">Upcoming</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1 Jun 2023</td>
+                                    <td>£1,275.50</td>
+                                    <td>£533.85</td>
+                                    <td>£741.65</td>
+                                    <td>£244,683.90</td>
+                                    <td><span class="payment-status upcoming">Upcoming</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1 Jul 2023</td>
+                                    <td>£1,275.50</td>
+                                    <td>£535.47</td>
+                                    <td>£740.03</td>
+                                    <td>£244,148.43</td>
+                                    <td><span class="payment-status upcoming">Upcoming</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1 Apr 2023</td>
+                                    <td>£1,275.50</td>
+                                    <td>£530.65</td>
+                                    <td>£744.85</td>
+                                    <td>£245,750.00</td>
+                                    <td><span class="payment-status completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1 Mar 2023</td>
+                                    <td>£1,275.50</td>
+                                    <td>£529.06</td>
+                                    <td>£746.44</td>
+                                    <td>£246,280.65</td>
+                                    <td><span class="payment-status completed">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="schedule-actions">
+                        <button class="button outline-button">
+                            <i class="fas fa-download"></i> Download Schedule
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Mortgage Calculator -->
+                <section class="mortgage-calculator">
+                    <div class="section-header">
+                        <h2>Mortgage Calculator</h2>
+                    </div>
+                    
+                    <div class="calculator-container">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="propertyValue">Property Value (£)</label>
+                                <input type="number" id="propertyValue" value="300000" min="10000" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="depositAmount">Deposit Amount (£)</label>
+                                <input type="number" id="depositAmount" value="60000" min="0" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="deposit-percentage">20% Deposit</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mortgageAmount">Mortgage Amount (£)</label>
+                                <input type="number" id="mortgageAmount" value="240000" min="10000" step="1000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interestRate">Interest Rate (%)</label>
+                                <input type="number" id="interestRate" value="3.75" min="0.1" max="15" step="0.01">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mortgageTerm">Mortgage Term (Years)</label>
+                                <input type="number" id="mortgageTerm" value="25" min="5" max="40" step="1">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button id="calculateMortgageBtn" class="button primary-button">Calculate</button>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-results">
+                            <div class="results-header">
+                                <h3>Monthly Repayments</h3>
+                            </div>
+                            
+                            <div class="monthly-payment">
+                                <div class="payment-amount">£1,234.56</div>
+                                <div class="payment-note">Based on your inputs</div>
+                            </div>
+                            
+                            <div class="results-summary">
+                                <div class="result-item">
+                                    <div class="result-label">Total Repayment</div>
+                                    <div class="result-value" id="totalRepayment">£370,368.00</div>
+                                </div>
+                                
+                                <div class="result-item">
+                                    <div class="result-label">Total Interest</div>
+                                    <div class="result-value" id="totalInterest">£130,368.00</div>
+                                </div>
+                            </div>
+                            
+                            <div class="repayment-breakdown">
+                                <div class="breakdown-header">Repayment Breakdown</div>
+                                <div class="breakdown-chart">
+                                    <div class="chart-segment principal" style="width: 65%;"></div>
+                                    <div class="chart-segment interest" style="width: 35%;"></div>
+                                </div>
+                                <div class="chart-labels">
+                                    <div class="chart-label">
+                                        <span class="label-color principal"></span>
+                                        <span class="label-text">Principal (65%)</span>
+                                    </div>
+                                    <div class="chart-label">
+                                        <span class="label-color interest"></span>
+                                        <span class="label-text">Interest (35%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calculator-note">
+                                This is an estimate only. Contact us for a personalized mortgage quote.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="mortgages.js"></script>
+</body>
+</html>

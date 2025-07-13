@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sparkle Trust Consolidated Bank</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="back-btn" onclick="goHome()">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="back-text">Back to Home</span>
+                    </button>
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span>STCB Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <p class="user-name" id="dashboardUserName"></p>
+                            <p class="user-email" id="dashboardUserEmail"></p>
+                        </div>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-main">
+            <!-- Welcome Section -->
+<div class="welcome-section">
+    <h1 id="welcomeMessage">Welcome back!</h1>
+    <p>Here's what's happening with your accounts today.</p>
+    <p id="dateTime"></p> <!-- Placeholder for date and time -->
+</div>
+
+            <!-- Navigation Tabs -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="overview" onclick="switchTab('overview')">
+                    <i class="fas fa-home"></i>
+                    <span>Overview</span>
+                </button>
+                <button class="tab-btn" data-tab="accounts" onclick="switchTab('accounts')">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Accounts</span>
+                </button>
+                <button class="tab-btn" data-tab="transactions" onclick="switchTab('transactions')">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Transactions</span>
+                </button>
+                <button class="tab-btn" data-tab="analytics" onclick="switchTab('analytics')">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Analytics</span>
+                </button>
+                <button class="tab-btn" data-tab="settings" onclick="switchTab('settings')">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div id="overview" class="tab-pane active">
+                    <!-- Balance Cards -->
+                    <div class="balance-cards">
+                        <div class="balance-card">
+                            <div class="card-header">
+                                <span class="card-title">Total Balance</span>
+                                <button class="toggle-balance" onclick="toggleBalance()">
+                                    <i id="balanceIcon" class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <div class="balance-amount" id="totalBalance">$5,304,841.50</div>
+                                <p class="balance-change">+2.5% from last month</p>
+                            </div>
+                        </div>
+
+                        <div class="balance-card">
+                            <div class="card-header">
+                                <span class="card-title">Savings Account</span>
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="balance-amount" id="savingsBalance">$5,000,000.00</div>
+                                <p class="balance-change">4.75% AER</p>
+                            </div>
+                        </div>
+
+                        <div class="balance-card">
+                            <div class="card-header">
+                                <span class="card-title">Current Account</span>
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="balance-amount" id="currentBalance">$4,841.50</div>
+                                <p class="balance-change">Available balance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions-card">
+                        <h3>Quick Actions</h3>
+                        <div class="quick-actions">
+                            <button class="action-btn primary" onclick="openPopup('transfer')">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Transfer</span>
+                            </button>
+                            <button class="action-btn" onclick="openPopup('deposit')">
+                                <i class="fas fa-plus"></i>
+                                <span>Deposit</span>
+                            </button>
+                            <button class="action-btn" onclick="openPopup('withdraw')">
+                                <i class="fas fa-download"></i>
+                                <span>Withdraw</span>
+                            </button>
+                            <button class="action-btn" onclick="openPopup('invest')">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Invest</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Transactions -->
+                    <div class="recent-transactions-card">
+                        <h3>Recent Transactions</h3>
+                        <div class="transactions-list" id="recentTransactionsList">
+                            <!-- Transactions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accounts Tab -->
+                <div id="accounts" class="tab-pane">
+                    <div class="accounts-list" id="accountsList">
+                        <!-- Accounts will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Transactions Tab -->
+                <div id="transactions" class="tab-pane">
+                    <!-- Filters -->
+                    <div class="filters-card">
+                        <div class="filters">
+                            <div class="search-filter">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search transactions..." id="transactionSearch">
+                            </div>
+                            <select id="categoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="Income">Income</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Bills">Bills</option>
+                                <option value="Food & Drink">Food & Drink</option>
+                                <option value="Transport">Transport</option>
+                            </select>
+                            <select id="dateFilter">
+                                <option value="30">Last 30 days</option>
+                                <option value="90">Last 3 months</option>
+                                <option value="180">Last 6 months</option>
+                                <option value="365">Last year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- All Transactions -->
+                    <div class="all-transactions-card">
+                        <h3>All Transactions</h3>
+                        <div class="transactions-list" id="allTransactionsList">
+                            <!-- Transactions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Tab -->
+                <div id="analytics" class="tab-pane">
+                    <div class="analytics-grid">
+                        <!-- Monthly Spending -->
+                        <div class="analytics-card">
+                            <h3>Monthly Spending Trend</h3>
+                            <div class="spending-chart" id="monthlySpendingChart">
+                                <!-- Chart will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Category Spending -->
+                        <div class="analytics-card">
+                            <h3>Spending by Category</h3>
+                            <div class="category-chart" id="categorySpendingChart">
+                                <!-- Chart will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Financial Insights -->
+                        <div class="insights-card">
+                            <h3>Average Monthly Spending</h3>
+                            <div class="insight-value">$1,833.00</div>
+                            <p class="insight-change positive">↓ 5% from last month</p>
+                        </div>
+
+                        <div class="insights-card">
+                            <h3>Largest Expense Category</h3>
+                            <div class="insight-value">Shopping</div>
+                            <p class="insight-change">34% of total spending</p>
+                        </div>
+
+                        <div class="insights-card">
+                            <h3>Savings Rate</h3>
+                            <div class="insight-value">23%</div>
+                            <p class="insight-change positive">↑ 2% from last month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div id="settings" class="tab-pane">
+                    <!-- Profile Settings -->
+                    <div class="settings-card">
+                        <h3>Profile Information</h3>
+                        <div class="profile-section">
+                            <div class="profile-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <button class="change-photo-btn">
+                                    <i class="fas fa-camera"></i>
+                                    Change Photo
+                                </button>
+                            </div>
+
+                            <div class="profile-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" id="profileName" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" id="profileEmail" value="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" value="+44 7123 456789">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" value="123 Main Street, London">
+                                    </div>
+                                </div>
+                                <button class="button primary-button">
+                                    <i class="fas fa-save"></i>
+                                    Save Changes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Settings -->
+                    <div class="settings-card">
+                        <h3>Security & Privacy</h3>
+                        <div class="security-options">
+                            <div class="security-option">
+                                <div class="option-info">
+                                    <i class="fas fa-key"></i>
+                                    <div>
+                                        <h4>Change Password</h4>
+                                        <p>Update your account password</p>
+                                    </div>
+                                </div>
+                                <button class="button outline-button">Change</button>
+                            </div>
+
+                            <div class="security-option">
+                                <div class="option-info">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div>
+                                        <h4>Two-Factor Authentication</h4>
+                                        <p>Add an extra layer of security</p>
+                                    </div>
+                                </div>
+                                <button class="button outline-button">Enable</button>
+                            </div>
+
+                            <div class="security-option">
+                                <div class="option-info">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <h4>Login Alerts</h4>
+                                        <p>Get notified of new logins</p>
+                                    </div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div class="settings-card">
+                        <h3>Notifications</h3>
+                        <div class="notification-options">
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Transaction Alerts</h4>
+                                    <p>Get notified of all transactions</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Monthly Statements</h4>
+                                    <p>Receive monthly account statements</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Marketing Emails</h4>
+                                    <p>Receive promotional offers and updates</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Security Alerts</h4>
+                                    <p>Important security notifications</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Popups -->
+    <!-- Transfer Popup -->
+    <div id="transferPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Transfer Money</h2>
+                <button class="close-btn" onclick="closePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="transferForm" class="popup-form">
+                <form onsubmit="handleTransfer(event)">
+                    <div class="form-group">
+                        <label>From Account</label>
+                        <select name="fromAccount">
+                            <option value="checking">Current Account ($4,841.50)</option>
+                            <option value="savings">Savings Account ($5,000,000.00)</option>
+                            <option value="business">Business Account ($0.00)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Recipient</label>
+                        <input type="text" name="recipient" placeholder="Enter recipient name or account number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <div class="amount-input">
+                            <span class="currency">$</span>
+                            <input type="number" name="amount" placeholder="0.00" step="0.01" min="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Reference (Optional)</label>
+                        <input type="text" name="reference" placeholder="Payment reference">
+                    </div>
+
+                    <button type="submit" class="button primary-button full-width">Transfer Money</button>
+                </form>
+            </div>
+
+            <div id="transferLoading" class="popup-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <h3>Processing Transfer</h3>
+                <p>Please wait while we process your transfer...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="transferError" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Deposit Popup -->
+    <div id="depositPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Deposit Money</h2>
+                <button class="close-btn" onclick="closePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="depositForm" class="popup-form">
+                <form onsubmit="handleDeposit(event)">
+                    <div class="form-group">
+                        <label>Deposit To</label>
+                        <select name="toAccount">
+                            <option value="checking">Current Account</option>
+                            <option value="savings">Savings Account</option>
+                            <option value="business">Business Account</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deposit Method</label>
+                        <select name="method">
+                            <option value="transfer">Bank Transfer</option>
+                            <option value="cheque">Cheque Deposit</option>
+                            <option value="cash">Cash Deposit</option>
+                            <option value="direct">Direct Deposit</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <div class="amount-input">
+                            <span class="currency">$</span>
+                            <input type="number" name="amount" placeholder="0.00" step="0.01" min="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" name="description" placeholder="Deposit description">
+                    </div>
+
+                    <button type="submit" class="button primary-button full-width">Confirm Deposit</button>
+                </form>
+            </div>
+
+            <div id="depositLoading" class="popup-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <h3>Processing Deposit</h3>
+                <p>Please wait while we process your deposit...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="depositError" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Withdraw Popup -->
+    <div id="withdrawPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Withdraw Money</h2>
+                <button class="close-btn" onclick="closePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="withdrawForm" class="popup-form">
+                <form onsubmit="handleWithdraw(event)">
+                    <div class="form-group">
+                        <label>Withdraw From</label>
+                        <select name="fromAccount">
+                            <option value="checking">Current Account ($4,841.50)</option>
+                            <option value="savings">Savings Account ($5,000,000.00)</option>
+                            <option value="business">Business Account ($0.00)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Withdrawal Method</label>
+                        <select name="method">
+                            <option value="atm">ATM Withdrawal</option>
+                            <option value="transfer">Bank Transfer</option>
+                            <option value="branch">Branch Withdrawal</option>
+                            <option value="online">Online Transfer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <div class="amount-input">
+                            <span class="currency">$</span>
+                            <input type="number" name="amount" placeholder="0.00" step="0.01" min="0.01" required>
+                        </div>
+                        <p class="input-help">Daily withdrawal limit: $500</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Purpose</label>
+                        <select name="purpose">
+                            <option value="personal">Personal Use</option>
+                            <option value="bills">Bill Payment</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button primary-button full-width">Confirm Withdrawal</button>
+                </form>
+            </div>
+
+            <div id="withdrawLoading" class="popup-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <h3>Processing Withdrawal</h3>
+                <p>Please wait while we process your withdrawal...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="withdrawError" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Invest Popup -->
+    <div id="investPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Investment Options</h2>
+                <button class="close-btn" onclick="closePopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="investForm" class="popup-form">
+                <form onsubmit="handleInvest(event)">
+                    <div class="form-group">
+                        <label>Investment Type</label>
+                        <select name="type">
+                            <option value="fixed">Fixed Term Deposit (3.5% APR)</option>
+                            <option value="isa">ISA Savings (4.2% APR)</option>
+                            <option value="bonds">Premium Bonds</option>
+                            <option value="stocks">Stocks & Shares ISA</option>
+                            <option value="corporate">Corporate Bonds</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Investment Term</label>
+                        <select name="term">
+                            <option value="6">6 Months</option>
+                            <option value="12">1 Year</option>
+                            <option value="24">2 Years</option>
+                            <option value="60">5 Years</option>
+                            <option value="120">10 Years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Investment Amount</label>
+                        <div class="amount-input">
+                            <span class="currency">$</span>
+                            <input type="number" name="amount" placeholder="1000.00" step="0.01" min="100" required>
+                        </div>
+                        <p class="input-help">Minimum investment: $100</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Risk Tolerance</label>
+                        <select name="risk">
+                            <option value="conservative">Conservative (Low Risk)</option>
+                            <option value="moderate">Moderate (Medium Risk)</option>
+                            <option value="aggressive">Aggressive (High Risk)</option>
+                        </select>
+                    </div>
+
+                    <div class="investment-warning">
+                        <p><strong>Investment Warning:</strong> The value of investments can go down as well as up. You may get back less than you invested.</p>
+                    </div>
+
+                    <button type="submit" class="button primary-button full-width">Start Investment</button>
+                </form>
+            </div>
+
+            <div id="investLoading" class="popup-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <h3>Processing Investment</h3>
+                <p>Please wait while we set up your investment...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="investError" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Time Buyer Mortgages | Sparkle Trust Consolidated Bank </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mortgages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+</head>
+<body>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="https://via.placeholder.com/120x40" alt="Atom Bank Logo">
+            </div>
+            <button id="closeMenuBtn" class="close-menu-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="savings.html">Savings</a></li>
+                <li><a href="mortgages.html">Mortgages</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html" class="btn btn-primary">Open Account</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero mortgage-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>First Time Buyer Mortgages</h1>
+                    <p class="hero-subtitle">Take your first step onto the property ladder with Atom Bank</p>
+                    <div class="rate-badge">
+                        <span class="rate">From 4.24%</span>
+                        <span class="rate-label">2 Year Fixed</span>
+                    </div>
+                    <p class="hero-description">
+                        We understand that buying your first home is a big step. That's why we've designed our first time buyer mortgages to be straightforward, with competitive rates and dedicated support throughout your application.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#mortgage-calculator" class="btn btn-primary btn-lg">Calculate Mortgage</a>
+                        <a href="mortgage-appointment.html" class="btn btn-outline btn-lg">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400" alt="First Time Buyer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Options Section -->
+    <section class="mortgage-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our First Time Buyer Mortgage Options</h2>
+                <p>Choose the mortgage that's right for you</p>
+            </div>
+            <div class="mortgage-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="fixed">Fixed Rate</button>
+                    <button class="tab-button" data-tab="tracker">Tracker Rate</button>
+                    <button class="tab-button" data-tab="offset">Offset Mortgage</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-panel active" id="fixed-tab">
+                        <div class="mortgage-products">
+                            <div class="mortgage-product">
+                                <div class="product-header">
+                                    <h3>2 Year Fixed</h3>
+                                    <div class="product-rate">4.24% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.24% fixed for 2 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.5% APRC</li>
+                                        <li>Max LTV: 90%</li>
+                                        <li>Early repayment charge: 2% in year 1, 1% in year 2</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                            <div class="mortgage-product featured">
+                                <div class="product-badge">Most Popular</div>
+                                <div class="product-header">
+                                    <h3>5 Year Fixed</h3>
+                                    <div class="product-rate">4.49% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.49% fixed for 5 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.2% APRC</li>
+                                        <li>Max LTV: 90%</li>
+                                        <li>Early repayment charge: 5% in year 1, reducing by 1% each year</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                            <div class="mortgage-product">
+                                <div class="product-header">
+                                    <h3>10 Year Fixed</h3>
+                                    <div class="product-rate">4.79% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.79% fixed for 10 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.1% APRC</li>
+                                        <li>Max LTV: 85%</li>
+                                        <li>Early repayment charge: 5% in years 1-5, reducing by 1% each year after</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel" id="tracker-tab">
+                        <div class="mortgage-products">
+                            <div class="mortgage-product">
+                                <div class="product-header">
+                                    <h3>2 Year Tracker</h3>
+                                    <div class="product-rate">4.34% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.34% (Bank of England base rate + 3.59%) for 2 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.6% APRC</li>
+                                        <li>Max LTV: 85%</li>
+                                        <li>Early repayment charge: 1% in years 1-2</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                            <div class="mortgage-product">
+                                <div class="product-header">
+                                    <h3>5 Year Tracker</h3>
+                                    <div class="product-rate">4.59% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.59% (Bank of England base rate + 3.84%) for 5 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.3% APRC</li>
+                                        <li>Max LTV: 85%</li>
+                                        <li>Early repayment charge: 2% in years 1-3, 1% in years 4-5</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel" id="offset-tab">
+                        <div class="mortgage-products">
+                            <div class="mortgage-product">
+                                <div class="product-header">
+                                    <h3>2 Year Fixed Offset</h3>
+                                    <div class="product-rate">4.44% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.44% fixed for 2 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.6% APRC</li>
+                                        <li>Max LTV: 80%</li>
+                                        <li>Early repayment charge: 2% in year 1, 1% in year 2</li>
+                                        <li>Link your savings to reduce interest payments</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                            <div class="mortgage-product">
+                                <div class="product-header">
+                                    <h3>5 Year Fixed Offset</h3>
+                                    <div class="product-rate">4.69% APRC</div>
+                                </div>
+                                <div class="product-details">
+                                    <ul>
+                                        <li>Initial rate: 4.69% fixed for 5 years</li>
+                                        <li>Then: 5.74% Standard Variable Rate</li>
+                                        <li>Overall cost for comparison: 5.3% APRC</li>
+                                        <li>Max LTV: 80%</li>
+                                        <li>Early repayment charge: 5% in year 1, reducing by 1% each year</li>
+                                        <li>Link your savings to reduce interest payments</li>
+                                    </ul>
+                                </div>
+                                <div class="product-action">
+                                    <a href="mortgage-application.html" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mortgage-disclaimer">
+                <p>Your home may be repossessed if you do not keep up repayments on your mortgage. The actual rate available will depend upon your circumstances. Ask for a personalised illustration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why choose Sparkle Trust Consolidated Bank  for your first mortgage?</h2>
+                <p>We're here to make your first home purchase as smooth as possible</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Competitive Rates</h3>
+                    <p>We offer some of the most competitive mortgage rates for first time buyers in the market.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Low Deposit Options</h3>
+                    <p>Get on the property ladder with as little as 10% deposit with our 90% LTV mortgages.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Free Mortgage Advice</h3>
+                    <p>Our mortgage advisors are on hand to guide you through the process at no extra cost.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Digital Application</h3>
+                    <p>Apply for your mortgage online or through our app - no paperwork required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Quick Decisions</h3>
+                    <p>Get a decision in principle in minutes and a full mortgage offer within days, not weeks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>No Hidden Fees</h3>
+                    <p>We're transparent about our fees, so you'll know exactly what you're paying for.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Calculator Section -->
+    <section id="mortgage-calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mortgage Calculator</h2>
+                <p>See how much you could borrow and what your monthly payments might be</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="propertyValue">Property value ($)</label>
+                        <input type="number" id="propertyValue" min="50000" max="1000000" value="250000">
+                    </div>
+                    <div class="form-group">
+                        <label for="depositAmount">Deposit amount ($)</label>
+                        <input type="number" id="depositAmount" min="5000" max="500000" value="25000">
+                        <div class="deposit-percentage">10% Deposit</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mortgageAmount">Mortgage amount ($)</label>
+                        <input type="number" id="mortgageAmount" min="10000" max="950000" value="225000">
+                    </div>
+                    <div class="form-group">
+                        <label for="mortgageTerm">Mortgage term (years)</label>
+                        <input type="number" id="mortgageTerm" min="5" max="40" value="25">
+                    </div>
+                    <div class="form-group">
+                        <label for="interestRate">Interest rate (%)</label>
+                        <input type="number" id="interestRate" min="1" max="10" step="0.01" value="4.49">
+                    </div>
+                    <button id="calculateMortgageBtn" class="btn btn-primary">Calculate</button>
+                </div>
+                <div class="calculator-results">
+                    <div class="results-header">
+                        <h3>Your Mortgage Estimate</h3>
+                    </div>
+                    <div class="monthly-payment">
+                        <div class="payment-label">Monthly Payment</div>
+                        <div class="payment-amount">$1,247.43</div>
+                    </div>
+                    <div class="result-summary">
+                        <div class="result-item">
+                            <span class="result-label">Total Mortgage</span>
+                            <span id="totalMortgage" class="result-value">$225,000.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Total Interest</span>
+                            <span id="totalInterest" class="result-value">$149,229.00</span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">Total Repayment</span>
+                            <span id="totalRepayment" class="result-value">$374,229.00</span>
+                        </div>
+                    </div>
+                    <div class="repayment-chart">
+                        <div class="chart-container">
+                            <div class="chart-segment principal" style="width: 60%"></div>
+                            <div class="chart-segment interest" style="width: 40%"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <div class="chart-label">
+                                <span class="label-color principal"></span>
+                                <span class="label-text">Principal (60%)</span>
+                            </div>
+                            <div class="chart-label">
+                                <span class="label-color interest"></span>
+                                <span class="label-text">Interest (40%)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-note">
+                        <p>This is an illustration only. The actual amount you can borrow and your monthly payments will depend on our assessment of your circumstances.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your First Time Buyer Journey</h2>
+                <p>We'll guide you through every step of the mortgage process</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Check Your Affordability</h3>
+                        <p>Use our mortgage calculator to get an idea of how much you could borrow and what your monthly payments might be.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get a Decision in Principle</h3>
+                        <p>Apply online for a Decision in Principle in just a few minutes. This will give you an indication of how much we could lend you.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Find Your Perfect Home</h3>
+                        <p>With your Decision in Principle in hand, you can start house hunting with confidence.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Complete Your Application</h3>
+                        <p>Once you've found your home, complete your full mortgage application online or with the help of our advisors.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Property Valuation</h3>
+                        <p>We'll arrange for a valuation of the property to ensure it provides adequate security for your mortgage.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Receive Your Mortgage Offer</h3>
+                        <p>Once we've completed all our checks, we'll issue your formal mortgage offer.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Exchange and Complete</h3>
+                        <p>Your solicitor will handle the legal work and exchange of contracts. On completion day, the funds will be transferred and you'll get the keys to your new home!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-cta">
+                <a href="mortgage-appointment.html" class="btn btn-primary btn-lg">Book a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about first time buyer mortgages</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much deposit do I need as a first time buyer?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>As a first time buyer with Atom Bank, you'll typically need a minimum deposit of 10% of the property's value. However, the larger your deposit, the better the interest rate you're likely to be offered. We also have some mortgage products that require a 15% deposit, which come with more competitive rates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much can I borrow for my first mortgage?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The amount you can borrow depends on several factors, including your income, outgoings, credit history, and the size of your deposit. As a general rule, you can typically borrow between 4-4.5 times your annual income. Use our mortgage calculator to get an estimate, or apply for a Decision in Principle for a more accurate figure.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What fees will I need to pay?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>There are several fees associated with getting a mortgage, including:
+                        <ul>
+                            <li>Arrangement fee: This is charged by the lender for setting up the mortgage. With Atom Bank, this ranges from £0-£999 depending on the product.</li>
+                            <li>Valuation fee: We offer free basic valuations on most of our mortgage products.</li>
+                            <li>Legal fees: You'll need to pay a solicitor to handle the legal aspects of buying a property.</li>
+                            <li>Stamp Duty: As a first time buyer, you may be eligible for Stamp Duty relief on properties up to £425,000.</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does the mortgage application process take?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The time it takes to get a mortgage can vary, but with Atom Bank, you can typically get a Decision in Principle in minutes. The full application process, from application to offer, usually takes 2-3 weeks, depending on the complexity of your application and how quickly you can provide the required documentation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents will I need to provide?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll typically need to provide:
+                        <ul>
+                            <li>Proof of identity (passport or driving license)</li>
+                            <li>Proof of address (utility bills, bank statements)</li>
+                            <li>Proof of income (payslips, P60, tax returns for self-employed)</li>
+                            <li>Bank statements (usually the last 3 months)</li>
+                            <li>Details of any existing debts or financial commitments</li>
+                        </ul>
+                        With Atom Bank's digital application process, you can upload these documents securely through our app or online portal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-more">
+                <a href="mortgage-faqs.html" class="btn btn-outline">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to take the first step?</h2>
+                <p>Get a Decision in Principle today and find out how much you could borrow for your first home.</p>
+                <div class="cta-actions">
+                    <a href="mortgage-application.html" class="btn btn-primary btn-lg">Apply Now</a>
+                    <a href="mortgage-appointment.html" class="btn btn-outline btn-lg">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="mortgages.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

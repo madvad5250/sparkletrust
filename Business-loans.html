@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkleBank - Business Loans</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero business-hero">
+        <div class="container">
+            <h1>Fuel Your Business Growth</h1>
+            <p>Flexible financing solutions for businesses of all sizes</p>
+            <a href="#loan-form" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <section class="loan-types">
+        <div class="container">
+            <h2>Business Loan Options</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <h3>Term Loans</h3>
+                    <p>Fixed amount with regular repayments over 1-10 years</p>
+                    <p class="rate">From 5.5% APR</p>
+                </div>
+                <div class="option-card">
+                    <h3>SBA Loans</h3>
+                    <p>Government-guaranteed loans with favorable terms</p>
+                    <p class="rate">From 4.9% APR</p>
+                </div>
+                <div class="option-card">
+                    <h3>Business Line of Credit</h3>
+                    <p>Flexible access to funds when you need them</p>
+                    <p class="rate">From 7.0% APR</p>
+                </div>
+                <div class="option-card">
+                    <h3>Equipment Financing</h3>
+                    <p>Purchase equipment while preserving working capital</p>
+                    <p class="rate">From 6.0% APR</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose SparkleBank for Your Business?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🏦</div>
+                    <h3>Quick Approval</h3>
+                    <p>Get decisions within 48 hours for most applications</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💳</div>
+                    <h3>Competitive Rates</h3>
+                    <p>Rates that help your business thrive</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">👔</div>
+                    <h3>Dedicated Advisors</h3>
+                    <p>Personalized service from business lending experts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📈</div>
+                    <h3>Growth Support</h3>
+                    <p>Tools and resources to help your business succeed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="loan-form" id="loan-form">
+        <div class="container">
+            <h2>Business Loan Application</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="business-name">Business Name</label>
+                        <input type="text" id="business-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-email">Business Email</label>
+                        <input type="email" id="business-email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="business-phone">Business Phone</label>
+                        <input type="tel" id="business-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business-type">Business Type</label>
+                        <select id="business-type" required>
+                            <option value="">Select</option>
+                            <option value="llc">LLC</option>
+                            <option value="corporation">Corporation</option>
+                            <option value="sole-proprietor">Sole Proprietor</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="time-in-business">Time in Business (years)</label>
+                        <input type="number" id="time-in-business" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="annual-revenue">Annual Revenue ($)</label>
+                        <input type="number" id="annual-revenue" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="loan-amount">Loan Amount Requested ($)</label>
+                    <input type="number" id="loan-amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="loan-purpose">Loan Purpose</label>
+                    <textarea id="loan-purpose" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"SparkleBank's business loan helped us expand our operations and hire 5 new employees. The process was smooth and their team was incredibly supportive."</p>
+                    <div class="author">
+                        <strong>Sarah Johnson</strong>
+                        <span>CEO, Johnson Bakery</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"As a startup, getting financing was challenging until we found SparkleBank. Their understanding of new businesses made all the difference."</p>
+                    <div class="author">
+                        <strong>Michael Chen</strong>
+                        <span>Founder, TechSolutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

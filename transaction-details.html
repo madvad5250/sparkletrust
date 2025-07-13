@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Details - Sparkle Trust Consolidated Bank </title>
+    <meta name="description" content="View detailed transaction information">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="transaction-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Sparkle Trust Consolidated Bank </span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">John Doe</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Transaction Details</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Transaction Details Content -->
+            <div class="dashboard-content">
+                <!-- Back Navigation -->
+                <div class="back-navigation">
+                    <a href="dashboard.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                </div>
+
+                <!-- Transaction Summary -->
+                <section class="transaction-summary">
+                    <div class="transaction-header">
+                        <div class="transaction-icon large">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="transaction-title-section">
+                            <h2 class="transaction-title">Sainsbury's</h2>
+                            <div class="transaction-category">
+                                <span class="category-tag">Groceries</span>
+                            </div>
+                        </div>
+                        <div class="transaction-amount-section">
+                            <div class="transaction-amount large expense">-£42.75</div>
+                            <div class="transaction-status completed">Completed</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transaction Details Card -->
+                <section class="transaction-details-card">
+                    <div class="card-section">
+                        <h3 class="section-title">Transaction Details</h3>
+                        
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <div class="detail-label">Date</div>
+                                <div class="detail-value">15 April 2023</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Time</div>
+                                <div class="detail-value">08:30 AM</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Transaction Type</div>
+                                <div class="detail-value">Card Payment</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Card</div>
+                                <div class="detail-value">Debit Card **** 4567</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Reference</div>
+                                <div class="detail-value">TRX23041500872</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Account</div>
+                                <div class="detail-value">Current Account</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-section">
+                        <h3 class="section-title">Merchant Information</h3>
+                        
+                        <div class="merchant-details">
+                            <div class="merchant-info">
+                                <div class="detail-item">
+                                    <div class="detail-label">Merchant Name</div>
+                                    <div class="detail-value">Sainsbury's Supermarket</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Location</div>
+                                    <div class="detail-value">123 High Street, London, UK</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Merchant Category</div>
+                                    <div class="detail-value">Grocery Stores</div>
+                                </div>
+                            </div>
+                            
+                            <div class="merchant-map">
+                                <div class="map-placeholder">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Map View</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-section">
+                        <h3 class="section-title">Transaction Breakdown</h3>
+                        
+                        <div class="transaction-breakdown">
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">Subtotal</div>
+                                <div class="breakdown-value">£35.63</div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">VAT (20%)</div>
+                                <div class="breakdown-value">£7.12</div>
+                            </div>
+                            <div class="breakdown-item total">
+                                <div class="breakdown-label">Total</div>
+                                <div class="breakdown-value">£42.75</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-section">
+                        <h3 class="section-title">Receipt</h3>
+                        
+                        <div class="receipt-section">
+                            <div class="receipt-items">
+                                <div class="receipt-item">
+                                    <div class="item-name">Fresh Vegetables</div>
+                                    <div class="item-quantity">1</div>
+                                    <div class="item-price">£8.50</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Milk (2L)</div>
+                                    <div class="item-quantity">1</div>
+                                    <div class="item-price">£1.80</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Bread</div>
+                                    <div class="item-quantity">2</div>
+                                    <div class="item-price">£2.40</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Chicken Breast</div>
+                                    <div class="item-quantity">1</div>
+                                    <div class="item-price">£6.75</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Pasta</div>
+                                    <div class="item-quantity">2</div>
+                                    <div class="item-price">£2.20</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Tomato Sauce</div>
+                                    <div class="item-quantity">1</div>
+                                    <div class="item-price">£1.50</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Cheese</div>
+                                    <div class="item-quantity">1</div>
+                                    <div class="item-price">£3.25</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Yogurt</div>
+                                    <div class="item-quantity">4</div>
+                                    <div class="item-price">£3.60</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Apples</div>
+                                    <div class="item-quantity">6</div>
+                                    <div class="item-price">£2.40</div>
+                                </div>
+                                <div class="receipt-item">
+                                    <div class="item-name">Orange Juice</div>
+                                    <div class="item-quantity">1</div>
+                                    <div class="item-price">£3.23</div>
+                                </div>
+                            </div>
+                            
+                            <div class="receipt-actions">
+                                <button class="button outline-button">
+                                    <i class="fas fa-download"></i> Download Receipt
+                                </button>
+                                <button class="button outline-button">
+                                    <i class="fas fa-print"></i> Print Receipt
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transaction Actions -->
+                <section class="transaction-actions">
+                    <div class="action-buttons">
+                        <button class="button secondary-button">
+                            <i class="fas fa-tag"></i> Change Category
+                        </button>
+                        <button class="button secondary-button">
+                            <i class="fas fa-flag"></i> Flag Transaction
+                        </button>
+                        <button class="button secondary-button">
+                            <i class="fas fa-exclamation-triangle"></i> Report Issue
+                        </button>
+                        <button class="button primary-button">
+                            <i class="fas fa-file-export"></i> Export Details
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Similar Transactions -->
+                <section class="similar-transactions">
+                    <h3 class="section-title">Similar Transactions</h3>
+                    
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Sainsbury's</div>
+                                <div class="transaction-date">08 Apr 2023</div>
+                            </div>
+                            <div class="transaction-amount expense">-£38.42</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Sainsbury's</div>
+                                <div class="transaction-date">01 Apr 2023</div>
+                            </div>
+                            <div class="transaction-amount expense">-£45.18</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Sainsbury's</div>
+                                <div class="transaction-date">25 Mar 2023</div>
+                            </div>
+                            <div class="transaction-amount expense">-£36.95</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="transaction-details.js"></script>
+</body>
+</html>

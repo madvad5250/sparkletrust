@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Trust Consolidated Bank - Mobile Banking Made Simple</title>
+    <meta name="description" content="Savings, mortgages and business loans with competitive rates and a seamless mobile experience.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="container">
+            <div class="cookie-content">
+                <div class="cookie-text">
+                    <div class="cookie-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="cookie-message">
+                        <h4>We use cookies</h4>
+                        <p>We use cookies to enhance your experience, analyze site traffic, and personalize content. By continuing to browse, you agree to our use of cookies.</p>
+                    </div>
+                </div>
+                <div class="cookie-buttons">
+                    <button class="button outline-button cookie-btn" onclick="learnMore()">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                    <button class="button primary-button cookie-btn" onclick="acceptCookies()">
+                        <i class="fas fa-check"></i>
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Welcome to Sparkle Trust Consolidated Bank</h1>
+                        <div class="hero-headings">
+                            <h2>SAVINGS.</h2>
+                            <h2>MORTGAGES.</h2>
+                            <h2>BUSINESS LOANS.</h2>
+                        </div>
+                        <button class="button primary-button">Discover our products</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/iphone-our-products-android-phone-your-mortgage_1Yz3oo (1).webp" alt="Mobile app screenshots">
+                    </div>
+                </div>
+
+                <div class="hero-cards">
+                    <div class="card">
+                        <h3>WE'RE RANKED #1 BEST IN BANK</h3>
+                        <p>See our 16,825 reviews on Trustpilot</p>
+                    </div>
+                    <div class="card">
+                        <div class="fscs-badge">
+                            <div class="fscs-icon">FSCS</div>
+                            <span>Protected</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="rating">
+                            <span class="rating-number">98%</span>
+                            <div class="rating-text">
+                                <p>of our customers</p>
+                                <p>would buy again</p>
+                            </div>
+                        </div>
+                        <p>Read 17,464 reviews</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet our simple and speedy products</h2>
+                    <p>Are you saving, buying a home or growing your business? We've got what you're looking for. Our products are a breeze to open and incredibly easy to use. Plus, we don't fork out on expensive branches, so we can deliver better rates for you.</p>
+                </div>
+
+                <div class="product-cards">
+                    <div class="product-card">
+                        <div class="product-header savings">
+                            <h3>Savings</h3>
+                        </div>
+                        <div class="product-content">
+                            <h4>Save up to 4.75% AER with our savings products</h4>
+                            <p>Whether you need easy access to your money with an Instant Saver or you're in it for the long haul with a Fixed Saver, you'll find an account to suit your needs.</p>
+                            <button class="button outline-button">Explore our savings range</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header mortgages">
+                            <h3>Mortgages</h3>
+                        </div>
+                        <div class="product-content">
+                            <h4>Fast, uncomplicated and competitive mortgages</h4>
+                            <p>We offer simple mortgages that provide competitive value through our network of independent brokers. Once your application is in, you can easily track it every step of the way in our app.</p>
+                            <button class="button outline-button">Explore our mortgage range</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-header commercial">
+                            <h3>Commercial mortgages</h3>
+                        </div>
+                        <div class="product-content">
+                            <h4>Fixed and variable rate commercial mortgages up to 75% LTV</h4>
+                            <p>We're supporting UK SMEs to grow with our business loan products. Our range includes fixed and variable business loans, as well as loans offered through the Growth Guarantee Scheme (GGS).</p>
+                            <button class="button outline-button">Explore our business loans</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Atom Section -->
+        <section class="why-atom">
+            <div class="container">
+                <h2>Why Sparkle Trust Consolidated Bank?</h2>
+                <p class="section-description">We are a digital bank and we are here to make banking easier, faster and better value with our products, services and in-app experience.</p>
+
+                <div class="feature-cards">
+                    <div class="feature-card savings-card">
+                        <h3>Savings and lending products that just work</h3>
+                        <p style="color: #fff;">Simple, competitive products designed to help you achieve your financial goals.</p>
+                        <button class="button secondary-button">Tell me more</button>
+                    </div>
+
+                    <div class="feature-card app-card">
+                        <h3>An app to make life easier</h3>
+                        <div class="app-features">
+                            <div class="app-feature">
+                                <span class="feature-bullet">•</span>
+                                <span>View transactions</span>
+                            </div>
+                            <div class="app-feature">
+                                <span class="feature-bullet">•</span>
+                                <span>Withdraw my money</span>
+                            </div>
+                            <div class="app-feature">
+                                <span class="feature-bullet">•</span>
+                                <span>View connected account</span>
+                            </div>
+                            <div class="app-feature">
+                                <span class="feature-bullet">•</span>
+                                <span>Create a statement</span>
+                            </div>
+                        </div>
+                        <button class="button dark-button">Show me how</button>
+                    </div>
+
+                    <div class="feature-card security-card">
+                        <h3>Keeping you safe and secure</h3>
+                        <p>Your security is our top priority with advanced protection for your accounts.</p>
+                        <button class="button dark-button">Find out more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Download Section -->
+        <section class="app-download">
+            <div class="container">
+                <div class="download-cards">
+                    <div class="download-card">
+                        <h3>Time to explore the app?</h3>
+                        <p>If you like what you see, then check out our app. Secure a great rate for your savings or simply and securely manage your mortgage.</p>
+                        <div class="app-preview">
+                            <img src="images/iphone-our-products-android-phone-your-mortgage_1Yz3oo (1).webp" alt="App screenshot">
+                            <button class="button dark-button">Find out more about our app</button>
+                        </div>
+                    </div>
+
+                    <div class="download-card">
+                        <h3>Scan me!</h3>
+                        <div class="qr-section">
+                            <div class="qr-code">
+                                <img src="images/scan.svg" alt="QR Code">
+                            </div>
+                            <div class="qr-steps">
+                                <p class="step"><span class="step-number">1</span> Scan the QR code with the camera on your device.</p>
+                                <p class="step"><span class="step-number">2</span> Use the link to open up the App Store or Google Play.</p>
+                                <p class="step"><span class="step-number">3</span> Use Install to get the Atom bank app.</p>
+                            </div>
+                        </div>
+                        <div class="app-stores">
+                            <h4>Already on your mobile or tablet?</h4>
+                            <p>Use the App Store or Google Play buttons to download!</p>
+                            <div class="store-buttons">
+                                <button class="button store-button">App Store</button>
+                                <button class="button store-button">Google Play</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Finance Section -->
+        <section class="business-finance">
+            <div class="container">
+                <h2>Looking to finance your business?</h2>
+                <p>Head over to our <a href="#" class="text-link">business loans</a> page for more details. When you're ready, you can then speak to a broker about your application.</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="our-story">
+            <div class="container">
+                <h2>Our story</h2>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="images/staff-photo-rivergreen-reception_Zbmp4U.webp" alt="Office photo">
+                    </div>
+                    <div class="story-content">
+                        <p>Sparkle Trust Consolidated Bank was founded in 2014 to make things better by offering customers better and fairer banking. We were awarded our banking licence in 2015, then officially launched in 2016. We've gone from strength to strength since, growing to a large team of talented people headquartered in sunny Durham. Our app-based savings accounts and mortgages have helped thousands of customers achieve their financial goals, which has led to us being ranked number 1 in Trustpilot's Best in Bank category.</p>
+                        <button class="button dark-button">Read the full Sparkle Trust Consolidated Bank story</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 style="color: #fff;">What do our customers say?</h2>
+                <p class="section-description">Read the live, unfiltered reviews from our customers</p>
+
+                <div class="testimonial-cards">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-meta">
+                            <span>Invited</span>
+                        </div>
+                        <h3 style="color: white;">Excellent customer service</h3>
+                        <p>Very easy to use app with great customer service. Would highly recommend.</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-meta">
+                            <span>Invited</span>
+                        </div>
+                        <h3 style="color: white;">I like how easy it is to set up</h3>
+                        <p>Very straightforward process and excellent rates. The app is intuitive and simple to use.</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-meta">
+                            <span>Invited</span>
+                        </div>
+                        <h3 style="color: white;">I opened a savings account</h3>
+                        <p>The process was quick and easy. Great interest rates and excellent customer service.</p>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-meta">
+                            <span>Invited</span>
+                        </div>
+                        <h3 style="color: white;">Very easy saving</h3>
+                        <p>Very easy saving, good rate of interest and excellent customer service when needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Policy Modal -->
+    <div id="cookieModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-cookie-bite"></i> Cookie Policy</h2>
+                <button class="close-btn" onclick="closeCookieModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>How We Use Cookies</h3>
+                <p>We use cookies and similar technologies to enhance your browsing experience, analyze site traffic, and personalize content.</p>
+                
+                <h4>Essential Cookies</h4>
+                <p>These cookies are necessary for the website to function and cannot be switched off in our systems.</p>
+                
+                <h4>Analytics Cookies</h4>
+                <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+                
+                <h4>Marketing Cookies</h4>
+                <p>These cookies are used to track visitors across websites to display relevant advertisements.</p>
+                
+                <div class="cookie-controls">
+                    <button class="button outline-button" onclick="acceptEssentialOnly()">Essential Only</button>
+                    <button class="button primary-button" onclick="acceptAllCookies()">Accept All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

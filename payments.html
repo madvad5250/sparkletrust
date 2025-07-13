@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Sparkle Trust Consolidated Bank </title>
+    <meta name="description" content="Make payments and manage transfers">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="payments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Source International Bank</span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">John Doe</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li>
+                        <a href="cards.html"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li class="active">
+                        <a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li>
+                        <a href="savings.html"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li>
+                        <a href="mortgages.html"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Payments</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Payments Content -->
+            <div class="dashboard-content">
+                <!-- Payment Options -->
+                <section class="payment-options">
+                    <div class="options-grid">
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h3>Transfer Money</h3>
+                            <p>Transfer between your accounts or to other people</p>
+                            <button class="button primary-button" id="transferBtn">Transfer</button>
+                        </div>
+                        
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3>Pay Someone</h3>
+                            <p>Make a one-time payment to a person or business</p>
+                            <button class="button primary-button" id="payBtn">Pay</button>
+                        </div>
+                        
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3>Scheduled Payments</h3>
+                            <p>Set up recurring payments or view scheduled transfers</p>
+                            <button class="button primary-button" id="scheduledBtn">Schedule</button>
+                        </div>
+                        
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <h3>Manage Payees</h3>
+                            <p>Add, edit or remove people and businesses you pay</p>
+                            <button class="button primary-button" id="payeesBtn">Manage</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transfer Money Form (hidden by default) -->
+                <section class="payment-form transfer-form" id="transferForm">
+                    <div class="form-header">
+                        <h2>Transfer Money</h2>
+                        <button class="close-form" id="closeTransferForm">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <form id="moneyTransferForm">
+                        <div class="form-section">
+                            <h3>From</h3>
+                            <div class="form-group">
+                                <label for="fromAccount">From Account</label>
+                                <select id="fromAccount" required>
+                                    <option value="current">Current Account - £2,458.32</option>
+                                    <option value="savings">Instant Saver - £15,742.65</option>
+                                    <option value="fixed">Fixed Saver - £10,000.00</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>To</h3>
+                            <div class="form-group">
+                                <label for="transferType">Transfer Type</label>
+                                <div class="transfer-type-selector">
+                                    <button type="button" class="transfer-type-btn active" data-type="own">My Accounts</button>
+                                    <button type="button" class="transfer-type-btn" data-type="other">Someone Else</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" id="ownAccountsGroup">
+                                <label for="toOwnAccount">To Account</label>
+                                <select id="toOwnAccount">
+                                    <option value="savings">Instant Saver - £15,742.65</option>
+                                    <option value="current">Current Account - £2,458.32</option>
+                                    <option value="fixed">Fixed Saver - £10,000.00</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group hidden" id="otherAccountsGroup">
+                                <label for="payee">Select Payee</label>
+                                <select id="payee">
+                                    <option value="">Select a payee</option>
+                                    <option value="jane">Jane Smith</option>
+                                    <option value="mike">Mike Johnson</option>
+                                    <option value="sarah">Sarah Williams</option>
+                                    <option value="new">+ Add New Payee</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Details</h3>
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <div class="amount-input">
+                                    <span class="currency-symbol">£</span>
+                                    <input type="number" id="amount" min="0.01" step="0.01" required placeholder="0.00">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reference">Reference</label>
+                                <input type="text" id="reference" placeholder="e.g. Rent payment">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="transferDate">When</label>
+                                <div class="date-selector">
+                                    <button type="button" class="date-option active" data-date="now">Now</button>
+                                    <button type="button" class="date-option" data-date="later">Later</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group hidden" id="datePickerGroup">
+                                <label for="scheduledDate">Date</label>
+                                <input type="date" id="scheduledDate" min="">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="button outline-button" id="cancelTransfer">Cancel</button>
+                            <button type="submit" class="button primary-button">Transfer Money</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Recent Payments -->
+                <section class="recent-payments">
+                    <div class="section-header">
+                        <h2>Recent Payments</h2>
+                        <a href="transactions.html" class="view-all">View All</a>
+                    </div>
+                    
+                    <div class="payments-list">
+                        <div class="payment-item">
+                            <div class="payment-icon outgoing">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Transfer to Savings</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">Today, 10:15 AM</span>
+                                    <span class="payment-status completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£500.00</div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-icon incoming">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Salary - ABC Company</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">14 Apr 2023</span>
+                                    <span class="payment-status completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount incoming">+£2,450.00</div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-icon outgoing">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Rent Payment - Sarah Williams</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">10 Apr 2023</span>
+                                    <span class="payment-status completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£850.00</div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-icon outgoing">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Electricity Bill</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">05 Apr 2023</span>
+                                    <span class="payment-status completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£75.50</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Scheduled Payments -->
+                <section class="scheduled-payments">
+                    <div class="section-header">
+                        <h2>Scheduled Payments</h2>
+                        <button class="button outline-button small">
+                            <i class="fas fa-plus"></i> New
+                        </button>
+                    </div>
+                    
+                    <div class="payments-list">
+                        <div class="payment-item">
+                            <div class="payment-icon scheduled">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Mortgage Payment</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">Due in 3 days</span>
+                                    <span class="payment-status scheduled">Scheduled</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£875.00</div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-icon scheduled">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Car Insurance</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">Due in 5 days</span>
+                                    <span class="payment-status scheduled">Scheduled</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£42.50</div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-icon scheduled">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Phone Bill</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">Due in 8 days</span>
+                                    <span class="payment-status scheduled">Scheduled</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£35.99</div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-icon recurring">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-title">Gym Membership</div>
+                                <div class="payment-meta">
+                                    <span class="payment-date">Monthly on the 15th</span>
+                                    <span class="payment-status recurring">Recurring</span>
+                                </div>
+                            </div>
+                            <div class="payment-amount outgoing">-£29.99</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="payments.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Source International Bank</title>
+    <meta name="description" content="Manage your account settings">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="settings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Source International Bank</span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">John Doe</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li>
+                        <a href="cards.html"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li>
+                        <a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li>
+                        <a href="savings.html"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li>
+                        <a href="mortgages.html"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li class="active">
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Settings</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="dashboard-content">
+                <!-- Settings Navigation -->
+                <div class="settings-container">
+                    <div class="settings-sidebar">
+                        <nav class="settings-nav">
+                            <ul>
+                                <li class="active" data-tab="profile">
+                                    <i class="fas fa-user"></i> Profile
+                                </li>
+                                <li data-tab="security">
+                                    <i class="fas fa-shield-alt"></i> Security
+                                </li>
+                                <li data-tab="notifications">
+                                    <i class="fas fa-bell"></i> Notifications
+                                </li>
+                                <li data-tab="preferences">
+                                    <i class="fas fa-sliders-h"></i> Preferences
+                                </li>
+                                <li data-tab="devices">
+                                    <i class="fas fa-mobile-alt"></i> Devices
+                                </li>
+                                <li data-tab="privacy">
+                                    <i class="fas fa-lock"></i> Privacy
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="settings-content">
+                        <!-- Profile Settings -->
+                        <div class="settings-tab active" id="profile-tab">
+                            <div class="settings-header">
+                                <h2>Profile Settings</h2>
+                                <p>Manage your personal information</p>
+                            </div>
+                            
+                            <div class="profile-section">
+                                <div class="profile-avatar">
+                                    <div class="avatar-preview">
+                                        <div class="user-avatar large">
+                                            <span>JD</span>
+                                        </div>
+                                    </div>
+                                    <div class="avatar-actions">
+                                        <button class="button outline-button small">
+                                            <i class="fas fa-upload"></i> Upload Photo
+                                        </button>
+                                        <button class="button outline-button small">
+                                            <i class="fas fa-trash"></i> Remove
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="profile-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name</label>
+                                            <input type="text" id="firstName" value="John">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name</label>
+                                            <input type="text" id="lastName" value="Doe">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" value="john.doe@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" value="+44 7700 900123">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="dateOfBirth">Date of Birth</label>
+                                            <input type="date" id="dateOfBirth" value="1985-06-15">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Address</label>
+                                            <input type="text" id="address" value="123 Main Street, London, UK">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button class="button primary-button" id="saveProfileBtn">Save Changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Security Settings -->
+                        <div class="settings-tab" id="security-tab">
+                            <div class="settings-header">
+                                <h2>Security Settings</h2>
+                                <p>Manage your account security</p>
+                            </div>
+                            
+                            <div class="security-section">
+                                <div class="security-card">
+                                    <div class="security-header">
+                                        <h3>Change Password</h3>
+                                    </div>
+                                    <div class="security-content">
+                                        <div class="form-group">
+                                            <label for="currentPassword">Current Password</label>
+                                            <input type="password" id="currentPassword">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newPassword">New Password</label>
+                                            <input type="password" id="newPassword">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirmPassword">Confirm New Password</label>
+                                            <input type="password" id="confirmPassword">
+                                        </div>
+                                        <div class="password-requirements">
+                                            <p>Password must:</p>
+                                            <ul>
+                                                <li>Be at least 8 characters long</li>
+                                                <li>Include at least one uppercase letter</li>
+                                                <li>Include at least one number</li>
+                                                <li>Include at least one special character</li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button class="button primary-button" id="changePasswordBtn">Change Password</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="security-card">
+                                    <div class="security-header">
+                                        <h3>Two-Factor Authentication</h3>
+                                    </div>
+                                    <div class="security-content">
+                                        <div class="toggle-item">
+                                            <div class="toggle-info">
+                                                <div class="toggle-name">Enable Two-Factor Authentication</div>
+                                                <div class="toggle-description">Add an extra layer of security to your account</div>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" id="twoFactorToggle">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="two-factor-options hidden" id="twoFactorOptions">
+                                            <div class="form-group">
+                                                <label>Verification Method</label>
+                                                <div class="radio-group">
+                                                    <label class="radio-label">
+                                                        <input type="radio" name="twoFactorMethod" value="sms" checked>
+                                                        <span>SMS</span>
+                                                    </label>
+                                                    <label class="radio-label">
+                                                        <input type="radio" name="twoFactorMethod" value="app">
+                                                        <span>Authenticator App</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions">
+                                                <button class="button primary-button" id="setupTwoFactorBtn">Set Up</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="security-card">
+                                    <div class="security-header">
+                                        <h3>Login History</h3>
+                                    </div>
+                                    <div class="security-content">
+                                        <div class="login-history">
+                                            <div class="login-item">
+                                                <div class="login-info">
+                                                    <div class="login-device">
+                                                        <i class="fas fa-laptop"></i> Windows PC - Chrome
+                                                    </div>
+                                                    <div class="login-details">
+                                                        <span class="login-location">London, UK</span>
+                                                        <span class="login-time">Today, 09:45 AM</span>
+                                                    </div>
+                                                </div>
+                                                <div class="login-status current">
+                                                    Current Session
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="login-item">
+                                                <div class="login-info">
+                                                    <div class="login-device">
+                                                        <i class="fas fa-mobile-alt"></i> iPhone - Safari
+                                                    </div>
+                                                    <div class="login-details">
+                                                        <span class="login-location">London, UK</span>
+                                                        <span class="login-time">Yesterday, 06:30 PM</span>
+                                                    </div>
+                                                </div>
+                                                <div class="login-status">
+                                                    <button class="button text-button small">
+                                                        <i class="fas fa-sign-

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Saver | Sparkle Trust Consolidated Bank </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixed-saver.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="https://via.placeholder.com/120x40" alt="Atom Bank Logo">
+            </div>
+            <button id="closeMenuBtn" class="close-menu-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="savings.html">Savings</a></li>
+                <li><a href="mortgages.html">Mortgages</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html" class="btn btn-primary">Open Account</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero product-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Fixed Saver</h1>
+                    <p class="hero-subtitle">Lock in a great rate for a fixed term</p>
+                    <div class="rate-badge">
+                        <span class="rate">4.85%</span>
+                        <span class="rate-label">AER/Gross (1 Year)</span>
+                    </div>
+                    <p class="hero-description">
+                        Our Fixed Saver account offers competitive interest rates with the security of knowing exactly how much you'll earn. Choose from 1, 2, or 3 year terms to suit your savings goals.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="signup.html" class="btn btn-primary btn-lg">Open an Account</a>
+                        <a href="#features" class="btn btn-outline btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400" alt="Fixed Saver Account">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Term Options Section -->
+    <section class="term-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Term</h2>
+                <p>Select the fixed term that works best for your savings goals</p>
+            </div>
+            <div class="term-cards">
+                <div class="term-card">
+                    <div class="term-header">
+                        <h3>1 Year Fixed Saver</h3>
+                        <div class="term-rate">4.85% AER/Gross</div>
+                    </div>
+                    <div class="term-features">
+                        <ul>
+                            <li>Lock your money away for 12 months</li>
+                            <li>Minimum deposit of $1,000</li>
+                            <li>Maximum deposit of $85,000</li>
+                            <li>Interest paid on maturity</li>
+                            <li>No withdrawals during the term</li>
+                        </ul>
+                    </div>
+                    <div class="term-action">
+                        <a href="signup.html" class="btn btn-primary">Open 1 Year Account</a>
+                    </div>
+                </div>
+                <div class="term-card featured">
+                    <div class="term-badge">Most Popular</div>
+                    <div class="term-header">
+                        <h3>2 Year Fixed Saver</h3>
+                        <div class="term-rate">5.00% AER/Gross</div>
+                    </div>
+                    <div class="term-features">
+                        <ul>
+                            <li>Lock your money away for 24 months</li>
+                            <li>Minimum deposit of $1,000</li>
+                            <li>Maximum deposit of $85,000</li>
+                            <li>Interest paid on maturity</li>
+                            <li>No withdrawals during the term</li>
+                        </ul>
+                    </div>
+                    <div class="term-action">
+                        <a href="signup.html" class="btn btn-primary">Open 2 Year Account</a>
+                    </div>
+                </div>
+                <div class="term-card">
+                    <div class="term-header">
+                        <h3>3 Year Fixed Saver</h3>
+                        <div class="term-rate">5.10% AER/Gross</div>
+                    </div>
+                    <div class="term-features">
+                        <ul>
+                            <li>Lock your money away for 36 months</li>
+                            <li>Minimum deposit of $1,000</li>
+                            <li>Maximum deposit of $85,000</li>
+                            <li>Interest paid on maturity</li>
+                            <li>No withdrawals during the term</li>
+                        </ul>
+                    </div>
+                    <div class="term-action">
+                        <a href="signup.html" class="btn btn-primary">Open 3 Year Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why choose our Fixed Saver account?</h2>
+                <p>Secure your savings with guaranteed returns</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Guaranteed Rate</h3>
+                    <p>Lock in a competitive interest rate that won't change for the duration of your term.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Higher Returns</h3>
+                    <p>Enjoy higher interest rates compared to easy access accounts when you commit to a fixed term.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Terms</h3>
+                    <p>Choose from 1, 2, or 3 year terms to match your savings timeline and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>FSCS Protected</h3>
+                    <p>Your eligible deposits are protected up to £85,000 by the Financial Services Compensation Scheme.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Digital Banking</h3>
+                    <p>Manage your account 24/7 through our award-winning app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Plan With Confidence</h3>
+                    <p>Know exactly how much your savings will be worth at the end of your term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fixed Saver Calculator</h2>
+                <p>See how much your savings could grow with our Fixed Saver account</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="depositAmount">Deposit amount ($)</label>
+                        <input type="number" id="depositAmount" min="1000" max="85000" value="10000">
+                    </div>
+                    <div class="form-group">
+                        <label for="savingTerm">Saving term</label>
+                        <select id="savingTerm">
+                            <option value="1">1 Year (4.85% AER/Gross)</option>
+                            <option value="2" selected>2 Years (5.00% AER/Gross)</option>
+                            <option value="3">3 Years (5.10% AER/Gross)</option>
+                        </select>
+                    </div>
+                    <button id="calculateBtn" class="btn btn-primary">Calculate</button>
+                </div>
+                <div class="calculator-results">
+                    <div class="results-header">
+                        <h3>Your Savings Projection</h3>
+                    </div>
+                    <div class="result-summary">
+                        <div class="result-item">
+                            <span class="result-label">Initial Deposit</span>
+                            <span id="initialDeposit" class="result-value">$10,000.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Interest Rate</span>
+                            <span id="interestRate" class="result-value">5.00% AER/Gross</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Interest Earned</span>
+                            <span id="interestEarned" class="result-value">$1,025.00</span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">Final Balance</span>
+                            <span id="finalBalance" class="result-value">$11,025.00</span>
+                        </div>
+                    </div>
+                    <div class="maturity-date">
+                        <p>Your Fixed Saver will mature on <span id="maturityDate">16 April 2027</span></p>
+                    </div>
+                    <div class="calculator-note">
+                        <p>This is an illustration only. The actual interest you receive may be subject to tax and depends on your individual circumstances.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our Fixed Saver account</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I withdraw my money before the end of the term?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, withdrawals are not permitted during the fixed term. Your money is locked away until the end of the term, so please ensure you won't need access to these funds during this period.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens when my Fixed Saver matures?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We'll contact you before your Fixed Saver matures to let you know your options. You can choose to reinvest in another Fixed Saver, transfer to an Instant Save account, or withdraw your funds to your nominated account.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How is interest calculated and paid?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Interest is calculated daily on your balance and paid at the end of the fixed term. The interest rate is fixed for the duration of the term.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I open more than one Fixed Saver account?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can open multiple Fixed Saver accounts with different terms to create a savings ladder strategy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my money protected?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, eligible deposits are protected by the Financial Services Compensation Scheme (FSCS) up to £85,000 per person.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-more">
+                <a href="faqs.html" class="btn btn-outline">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to lock in a great rate?</h2>
+                <p>Open a Fixed Saver account today and secure your savings with guaranteed returns.</p>
+                <div class="cta-actions">
+                    <a href="signup.html" class="btn btn-primary btn-lg">Open an Account</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="fixed-saver.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

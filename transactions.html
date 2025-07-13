@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Sparkle Trust Consolidated Bank </title>
+    <meta name="description" content="View and manage your transactions">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="transactions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Sparkle Trust Consolidated Bank </span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">Edward Lee Cooksey</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li>
+                        <a href="cards.html"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li>
+                        <a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li>
+                        <a href="savings.html"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li>
+                        <a href="mortgages.html"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Transactions</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Transactions Content -->
+            <div class="dashboard-content">
+                <!-- Account Selector -->
+                <section class="account-selector">
+                    <div class="selector-header">
+                        <h2>Select Account</h2>
+                    </div>
+                    <div class="account-tabs">
+                        <button class="account-tab active" data-account="all">
+                            <div class="tab-icon all">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="tab-info">
+                                <div class="tab-name">All Accounts</div>
+                                <div class="tab-balance">£28,200.97</div>
+                            </div>
+                        </button>
+                        <button class="account-tab" data-account="current">
+                            <div class="tab-icon current">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="tab-info">
+                                <div class="tab-name">Current Account</div>
+                                <div class="tab-balance">£2,458.32</div>
+                            </div>
+                        </button>
+                        <button class="account-tab" data-account="savings">
+                            <div class="tab-icon savings">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <div class="tab-info">
+                                <div class="tab-name">Instant Saver</div>
+                                <div class="tab-balance">£15,742.65</div>
+                            </div>
+                        </button>
+                        <button class="account-tab" data-account="fixed">
+                            <div class="tab-icon fixed">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="tab-info">
+                                <div class="tab-name">Fixed Saver</div>
+                                <div class="tab-balance">£10,000.00</div>
+                            </div>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Transaction Filters -->
+                <section class="transaction-filters">
+                    <div class="search-filter">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchTransactions" placeholder="Search transactions...">
+                        </div>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <label for="dateFilter">Date Range</label>
+                            <select id="dateFilter">
+                                <option value="all">All Time</option>
+                                <option value="today">Today</option>
+                                <option value="week" selected>This Week</option>
+                                <option value="month">This Month</option>
+                                <option value="year">This Year</option>
+                                <option value="custom">Custom Range</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="categoryFilter">Category</label>
+                            <select id="categoryFilter">
+                                <option value="all">All Categories</option>
+                                <option value="groceries">Groceries</option>
+                                <option value="dining">Dining Out</option>
+                                <option value="transport">Transport</option>
+                                <option value="bills">Bills & Utilities</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="income">Income</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="amountFilter">Amount</label>
+                            <select id="amountFilter">
+                                <option value="all">All Amounts</option>
+                                <option value="under10">Under £10</option>
+                                <option value="10to50">£10 - £50</option>
+                                <option value="50to100">£50 - £100</option>
+                                <option value="over100">Over £100</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="typeFilter">Type</label>
+                            <select id="typeFilter">
+                                <option value="all">All Types</option>
+                                <option value="card">Card Payments</option>
+                                <option value="transfer">Transfers</option>
+                                <option value="direct">Direct Debits</option>
+                                <option value="standing">Standing Orders</option>
+                                <option value="atm">ATM Withdrawals</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-actions">
+                        <button id="applyFilters" class="button primary-button">Apply Filters</button>
+                        <button id="resetFilters" class="button outline-button">Reset</button>
+                        <div class="export-dropdown">
+                            <button class="button secondary-button">
+                                <i class="fas fa-download"></i> Export
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="export-dropdown-content">
+                                <a href="#" data-format="pdf">PDF</a>
+                                <a href="#" data-format="csv">CSV</a>
+                                <a href="#" data-format="excel">Excel</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transaction List -->
+                <section class="transaction-list-section">
+                    <div class="transaction-list-header">
+                        <h2>Transaction History</h2>
+                        <div class="transaction-count">Showing <span id="transactionCount">15</span> transactions</div>
+                    </div>
+                    
+                    <!-- Date Group: Today -->
+                    <div class="transaction-date-group">
+                        <div class="date-header">Today</div>
+                        <div class="transactions-list">
+                            <div class="transaction-item" data-id="1" data-category="groceries" data-amount="42.75" data-type="card">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Sainsbury's</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Groceries</span>
+                                        <span class="transaction-time">08:30 AM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£42.75</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Group: Yesterday -->
+                    <div class="transaction-date-group">
+                        <div class="date-header">Yesterday</div>
+                        <div class="transactions-list">
+                            <div class="transaction-item" data-id="2" data-category="entertainment" data-amount="15.99" data-type="card">
+                                <div class="transaction-icon entertainment">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Netflix</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Entertainment</span>
+                                        <span class="transaction-time">06:15 PM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£15.99</div>
+                            </div>
+                            
+                            <div class="transaction-item" data-id="3" data-category="dining" data-amount="32.50" data-type="card">
+                                <div class="transaction-icon dining">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Pizza Express</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Dining Out</span>
+                                        <span class="transaction-time">01:20 PM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£32.50</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Group: 14 Apr 2023 -->
+                    <div class="transaction-date-group">
+                        <div class="date-header">14 Apr 2023</div>
+                        <div class="transactions-list">
+                            <div class="transaction-item" data-id="4" data-category="income" data-amount="2450.00" data-type="transfer">
+                                <div class="transaction-icon salary">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Salary - ABC Company</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Income</span>
+                                        <span class="transaction-time">09:00 AM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount income">+£2,450.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Group: 13 Apr 2023 -->
+                    <div class="transaction-date-group">
+                        <div class="date-header">13 Apr 2023</div>
+                        <div class="transactions-list">
+                            <div class="transaction-item" data-id="5" data-category="bills" data-amount="85.20" data-type="direct">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">British Gas</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Bills & Utilities</span>
+                                        <span class="transaction-time">07:30 AM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£85.20</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Group: 10 Apr 2023 -->
+                    <div class="transaction-date-group">
+                        <div class="date-header">10 Apr 2023</div>
+                        <div class="transactions-list">
+                            <div class="transaction-item" data-id="6" data-category="bills" data-amount="32.99" data-type="direct">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">BT Internet</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Bills & Utilities</span>
+                                        <span class="transaction-time">08:15 AM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£32.99</div>
+                            </div>
+                            
+                            <div class="transaction-item" data-id="7" data-category="transport" data-amount="45.00" data-type="card">
+                                <div class="transaction-icon transport">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Shell Petrol Station</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Transport</span>
+                                        <span class="transaction-time">12:45 PM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£45.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Group: 09 Apr 2023 -->
+                    <div class="transaction-date-group">
+                        <div class="date-header">09 Apr 2023</div>
+                        <div class="transactions-list">
+                            <div class="transaction-item" data-id="8" data-category="dining" data-amount="28.45" data-type="card">
+                                <div class="transaction-icon dining">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">Nando's</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Dining Out</span>
+                                        <span class="transaction-time">07:30 PM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£28.45</div>
+                            </div>
+                            
+                            <div class="transaction-item" data-id="9" data-category="shopping" data-amount="120.50" data-type="card">
+                                <div class="transaction-icon shopping">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">H&M</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Shopping</span>
+                                        <span class="transaction-time">03:15 PM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£120.50</div>
+                            </div>
+                            
+                            <div class="transaction-item" data-id="10" data-category="atm" data-amount="50.00" data-type="atm">
+                                <div class="transaction-icon atm">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="transaction-title">ATM Withdrawal</div>
+                                    <div class="transaction-meta">
+                                        <span class="transaction-category">Cash</span>
+                                        <span class="transaction-time">11:20 AM</span>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount expense">-£50.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Load More Button -->
+                    <div class="load-more-container">
+                        <button id="loadMoreTransactions" class="button outline-button">Load More</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="transactions.js"></script>
+</body>
+</html>

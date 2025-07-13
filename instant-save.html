@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Save | Sparkle Trust Consolidated Bank </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="instant-save.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+</head>
+<body>
+ 
+        <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero product-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Instant Save</h1>
+                    <p class="hero-subtitle">Easy access to your money with competitive interest rates</p>
+                    <div class="rate-badge">
+                        <span class="rate">4.15%</span>
+                        <span class="rate-label">AER/Gross</span>
+                    </div>
+                    <p class="hero-description">
+                        Our Instant Save account gives you the flexibility to access your money whenever you need it, while still earning a competitive interest rate.
+                    </p>
+                    <div class="hero-actions" style="margin: 30px;">
+                        <a href="signup.html" class="btn btn-primary btn-lg">Open an Account</a>
+                        <a href="#features" class="btn btn-outline btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/fixed.png" alt="Instant Save Account">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why choose our Instant Save account?</h2>
+                <p>Enjoy the perfect balance of flexibility and returns</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Access</h3>
+                    <p>Withdraw your money whenever you need it with no penalties or notice periods.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Competitive Rate</h3>
+                    <p>Earn 4.15% AER/Gross on your savings, calculated daily and paid monthly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-pound-sign"></i>
+                    </div>
+                    <h3>Low Minimum Deposit</h3>
+                    <p>Start with just $1 and save up to $85,000 per person.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>FSCS Protected</h3>
+                    <p>Your eligible deposits are protected up to $85,000 by the Financial Services Compensation Scheme.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Digital Banking</h3>
+                    <p>Manage your account 24/7 through our award-winning app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Track Your Progress</h3>
+                    <p>Set savings goals and track your progress with our intuitive tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Opening and managing your Instant Save account is simple</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Apply Online</h3>
+                        <p>Complete our simple online application in just a few minutes. You'll need your ID and proof of address ready.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Fund Your Account</h3>
+                        <p>Transfer money from your existing bank account to start earning interest right away. You can deposit as little as $1 or up to $85,000.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Manage Your Savings</h3>
+                        <p>Use our app to check your balance, make deposits or withdrawals, and track your interest earnings anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Savings Calculator</h2>
+                <p>See how much interest you could earn with our Instant Save account</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="initialDeposit">Initial deposit ($)</label>
+                        <input type="number" id="initialDeposit" min="1" max="85000" value="1000">
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyDeposit">Monthly deposit ($)</label>
+                        <input type="number" id="monthlyDeposit" min="0" max="10000" value="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="savingPeriod">Saving period (months)</label>
+                        <input type="number" id="savingPeriod" min="1" max="60" value="12">
+                    </div>
+                    <div class="form-group">
+                        <label for="interestRate">Interest rate (%)</label>
+                        <input type="number" id="interestRate" value="4.15" readonly>
+                    </div>
+                    <button id="calculateBtn" class="btn btn-primary">Calculate</button>
+                </div>
+                <div class="calculator-results">
+                    <div class="results-header">
+                        <h3>Your Savings Projection</h3>
+                    </div>
+                    <div class="result-summary">
+                        <div class="result-item">
+                            <span class="result-label">Total Deposits</span>
+                            <span id="totalDeposits" class="result-value">$2,200.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Interest Earned</span>
+                            <span id="interestEarned" class="result-value">$53.30</span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">Final Balance</span>
+                            <span id="finalBalance" class="result-value">$2,253.30</span>
+                        </div>
+                    </div>
+                    <div class="results-chart">
+                        <canvas id="savingsChart"></canvas>
+                    </div>
+                    <div class="calculator-note">
+                        <p>This is an illustration only. The actual interest you receive may be subject to tax and depends on your individual circumstances.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our Instant Save account</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the minimum amount I can deposit?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can open an Instant Save account with as little as $1. There is no maximum deposit limit, but the FSCS protection only covers up to $85,000 per person.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can I access my money?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can withdraw your money at any time without notice or penalties. Transfers to your nominated account typically arrive within 1-2 hours, but may take up to one working day.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How is interest calculated and paid?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Interest is calculated daily on your balance and paid into your account monthly. The current rate is 4.15% AER/Gross (variable).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I have more than one Instant Save account?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can open multiple Instant Save accounts to help you organize your savings for different goals.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my money protected?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, eligible deposits are protected by the Financial Services Compensation Scheme (FSCS) up to $85,000 per person.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-more" style="margin: 20px;">
+                <a href="faqs.html" class="btn btn-outline">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to start saving?</h2>
+                <p>Open an Instant Save account today and start earning 4.15% AER/Gross on your savings.</p>
+                <div class="cta-actions" style="margin: 30px;">
+                    <a href="signup.html" class="btn btn-primary btn-lg">Open an Account</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="instant-save.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

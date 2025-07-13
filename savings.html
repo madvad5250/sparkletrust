@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings - Sparkle Trust Consolidated Bank </title>
+    <meta name="description" content="Manage your savings accounts">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="savings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Source International Bank</span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">John Doe</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li>
+                        <a href="cards.html"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li>
+                        <a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li class="active">
+                        <a href="savings.html"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li>
+                        <a href="mortgages.html"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Savings</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Savings Content -->
+            <div class="dashboard-content">
+                <!-- Savings Overview -->
+                <section class="savings-overview">
+                    <div class="overview-header">
+                        <h2>Your Savings</h2>
+                        <div class="total-savings">
+                            <div class="total-label">Total Savings</div>
+                            <div class="total-amount">£25,742.65</div>
+                        </div>
+                    </div>
+                    
+                    <div class="savings-accounts">
+                        <!-- Instant Saver -->
+                        <div class="savings-account">
+                            <div class="account-header">
+                                <div class="account-icon">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <div class="account-info">
+                                    <h3>Instant Saver</h3>
+                                    <div class="account-meta">
+                                        <span class="account-number">**** 7890</span>
+                                        <span class="account-rate">3.25% AER</span>
+                                    </div>
+                                </div>
+                                <div class="account-balance">
+                                    <div class="balance-amount">£15,742.65</div>
+                                    <div class="balance-change positive">+£125.30 this month</div>
+                                </div>
+                            </div>
+                            <div class="account-actions">
+                                <button class="button outline-button">
+                                    <i class="fas fa-plus"></i> Deposit
+                                </button>
+                                <button class="button outline-button">
+                                    <i class="fas fa-minus"></i> Withdraw
+                                </button>
+                                <button class="button outline-button">
+                                    <i class="fas fa-cog"></i> Manage
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Fixed Saver -->
+                        <div class="savings-account">
+                            <div class="account-header">
+                                <div class="account-icon fixed">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="account-info">
+                                    <h3>Fixed Saver</h3>
+                                    <div class="account-meta">
+                                        <span class="account-number">**** 1234</span>
+                                        <span class="account-rate">4.75% AER</span>
+                                    </div>
+                                </div>
+                                <div class="account-balance">
+                                    <div class="balance-amount">£10,000.00</div>
+                                    <div class="balance-change neutral">Matures on 15 Oct 2023</div>
+                                </div>
+                            </div>
+                            <div class="account-actions">
+                                <button class="button outline-button" disabled>
+                                    <i class="fas fa-plus"></i> Deposit
+                                </button>
+                                <button class="button outline-button" disabled>
+                                    <i class="fas fa-minus"></i> Withdraw
+                                </button>
+                                <button class="button outline-button">
+                                    <i class="fas fa-cog"></i> Manage
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="add-account">
+                        <button class="button primary-button">
+                            <i class="fas fa-plus"></i> Open New Savings Account
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Savings Goals -->
+                <section class="savings-goals">
+                    <div class="section-header">
+                        <h2>Savings Goals</h2>
+                        <button class="button outline-button small">
+                            <i class="fas fa-plus"></i> New Goal
+                        </button>
+                    </div>
+                    
+                    <div class="goals-container">
+                        <!-- Holiday Goal -->
+                        <div class="goal-card">
+                            <div class="goal-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <div class="goal-info">
+                                <h3>Holiday Fund</h3>
+                                <div class="goal-progress-container">
+                                    <div class="goal-progress">
+                                        <div class="progress-bar" style="width: 65%;"></div>
+                                    </div>
+                                    <div class="progress-text">65% Complete</div>
+                                </div>
+                                <div class="goal-amounts">
+                                    <div class="saved-amount">£1,950</div>
+                                    <div class="target-amount">£3,000</div>
+                                </div>
+                                <div class="goal-date">Target: August 2023</div>
+                            </div>
+                            <div class="goal-actions">
+                                <button class="button outline-button small">
+                                    <i class="fas fa-plus"></i> Add Money
+                                </button>
+                                <button class="button outline-button small">
+                                    <i class="fas fa-cog"></i> Edit
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- New Car Goal -->
+                        <div class="goal-card">
+                            <div class="goal-icon car">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="goal-info">
+                                <h3>New Car</h3>
+                                <div class="goal-progress-container">
+                                    <div class="goal-progress">
+                                        <div class="progress-bar" style="width: 25%;"></div>
+                                    </div>
+                                    <div class="progress-text">25% Complete</div>
+                                </div>
+                                <div class="goal-amounts">
+                                    <div class="saved-amount">£2,500</div>
+                                    <div class="target-amount">£10,000</div>
+                                </div>
+                                <div class="goal-date">Target: December 2024</div>
+                            </div>
+                            <div class="goal-actions">
+                                <button class="button outline-button small">
+                                    <i class="fas fa-plus"></i> Add Money
+                                </button>
+                                <button class="button outline-button small">
+                                    <i class="fas fa-cog"></i> Edit
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Emergency Fund Goal -->
+                        <div class="goal-card">
+                            <div class="goal-icon emergency">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="goal-info">
+                                <h3>Emergency Fund</h3>
+                                <div class="goal-progress-container">
+                                    <div class="goal-progress">
+                                        <div class="progress-bar" style="width: 80%;"></div>
+                                    </div>
+                                    <div class="progress-text">80% Complete</div>
+                                </div>
+                                <div class="goal-amounts">
+                                    <div class="saved-amount">£4,000</div>
+                                    <div class="target-amount">£5,000</div>
+                                </div>
+                                <div class="goal-date">Target: Ongoing</div>
+                            </div>
+                            <div class="goal-actions">
+                                <button class="button outline-button small">
+                                    <i class="fas fa-plus"></i> Add Money
+                                </button>
+                                <button class="button outline-button small">
+                                    <i class="fas fa-cog"></i> Edit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Savings Calculator -->
+                <section class="savings-calculator">
+                    <div class="section-header">
+                        <h2>Savings Calculator</h2>
+                    </div>
+                    
+                    <div class="calculator-container">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="initialDeposit">Initial Deposit (£)</label>
+                                <input type="number" id="initialDeposit" value="1000" min="0" step="100">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="monthlyContribution">Monthly Contribution (£)</label>
+                                <input type="number" id="monthlyContribution" value="100" min="0" step="10">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interestRate">Interest Rate (% AER)</label>
+                                <input type="number" id="interestRate" value="3.25" min="0" max="20" step="0.01">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="savingPeriod">Saving Period (Years)</label>
+                                <input type="number" id="savingPeriod" value="5" min="1" max="50" step="1">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button id="calculateBtn" class="button primary-button">Calculate</button>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-results">
+                            <div class="results-header">
+                                <h3>Projected Savings</h3>
+                            </div>
+                            
+                            <div class="results-summary">
+                                <div class="result-item">
+                                    <div class="result-label">Total Contributions</div>
+                                    <div class="result-value" id="totalContributions">£7,000.00</div>
+                                </div>
+                                
+                                <div class="result-item">
+                                    <div class="result-label">Interest Earned</div>
+                                    <div class="result-value" id="interestEarned">£1,123.75</div>
+                                </div>
+                                
+                                <div class="result-item total">
+                                    <div class="result-label">Final Balance</div>
+                                    <div class="result-value" id="finalBalance">£8,123.75</div>
+                                </div>
+                            </div>
+                            
+                            <div class="results-chart">
+                                <div class="chart-placeholder">
+                                    <div class="chart-bars">
+                                        <div class="chart-bar contributions" style="height: 70%;"></div>
+                                        <div class="chart-bar interest" style="height: 30%;"></div>
+                                    </div>
+                                    <div class="chart-labels">
+                                        <span class="contributions-label">Contributions</span>
+                                        <span class="interest-label">Interest</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="savings.js"></script>
+</body>
+</html>

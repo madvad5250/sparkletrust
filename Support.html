@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center - SparkleBank</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero support-hero">
+        <div class="container">
+            <h1>Support Center</h1>
+            <p>Resources and assistance for all your banking needs</p>
+        </div>
+    </section>
+
+    <section class="support-quick-links">
+        <div class="container">
+            <h2>Quick Help Topics</h2>
+            <div class="quick-links-grid">
+                <a href="#" class="quick-link-card">
+                    <div class="link-icon">🔐</div>
+                    <h3>Account Security</h3>
+                    <p>Protect your accounts and personal information</p>
+                </a>
+                <a href="#" class="quick-link-card">
+                    <div class="link-icon">💳</div>
+                    <h3>Card Services</h3>
+                    <p>Lost/stolen cards, disputes, and card management</p>
+                </a>
+                <a href="#" class="quick-link-card">
+                    <div class="link-icon">📱</div>
+                    <h3>Mobile Banking</h3>
+                    <p>App troubleshooting and features</p>
+                </a>
+                <a href="#" class="quick-link-card">
+                    <div class="link-icon">🏦</div>
+                    <h3>Account Management</h3>
+                    <p>Transfers, bill pay, and account settings</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-resources" hidden>
+        <div class="container">
+            <h2>Self-Service Resources</h2>
+            <div class="resources-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="videos">Video Tutorials</button>
+                    <button class="tab-btn" data-tab="guides">Step-by-Step Guides</button>
+                    <button class="tab-btn" data-tab="forms">Forms & Documents</button>
+                </div>
+                <div class="tab-content active" id="videos">
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail"></div>
+                            <h3>Mobile Banking Setup</h3>
+                            <p class="duration">3:25 min</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail"></div>
+                            <h3>Using Zelle® for Payments</h3>
+                            <p class="duration">4:10 min</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail"></div>
+                            <h3>Mobile Check Deposit</h3>
+                            <p class="duration">2:45 min</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail"></div>
+                            <h3>Bill Pay Tutorial</h3>
+                            <p class="duration">5:15 min</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">View All Videos</a>
+                </div>
+                <div class="tab-content" id="guides">
+                    <div class="guides-grid">
+                        <div class="guide-card">
+                            <h3>Setting Up Account Alerts</h3>
+                            <p>Learn how to configure email and text alerts for your accounts</p>
+                            <a href="#" class="btn-link">Read Guide →</a>
+                        </div>
+                        <div class="guide-card">
+                            <h3>Transferring Money Between Accounts</h3>
+                            <p>Step-by-step instructions for internal and external transfers</p>
+                            <a href="#" class="btn-link">Read Guide →</a>
+                        </div>
+                        <div class="guide-card">
+                            <h3>Updating Personal Information</h3>
+                            <p>How to change your address, phone number, or email</p>
+                            <a href="#" class="btn-link">Read Guide →</a>
+                        </div>
+                        <div class="guide-card">
+                            <h3>Disputing a Transaction</h3>
+                            <p>Process for reporting unauthorized or incorrect charges</p>
+                            <a href="#" class="btn-link">Read Guide →</a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">View All Guides</a>
+                </div>
+                <div class="tab-content" id="forms">
+                    <div class="forms-grid">
+                        <div class="form-card">
+                            <h3>Account Application</h3>
+                            <p>PDF | 250KB</p>
+                            <a href="#" class="btn-link">Download →</a>
+                        </div>
+                        <div class="form-card">
+                            <h3>Wire Transfer Form</h3>
+                            <p>PDF | 180KB</p>
+                            <a href="#" class="btn-link">Download →</a>
+                        </div>
+                        <div class="form-card">
+                            <h3>Fee Schedule</h3>
+                            <p>PDF | 350KB</p>
+                            <a href="#" class="btn-link">Download →</a>
+                        </div>
+                        <div class="form-card">
+                            <h3>Direct Deposit Form</h3>
+                            <p>PDF | 210KB</p>
+                            <a href="#" class="btn-link">Download →</a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">View All Forms</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-community" hidden>
+        <div class="container">
+            <div class="community-card">
+                <div class="community-content">
+                    <h2>Community Forum</h2>
+                    <p>Connect with other SparkleBank customers to get answers and share knowledge.</p>
+                    <div class="community-stats">
+                        <div class="stat">
+                            <strong>12,345+</strong>
+                            <span>Members</span>
+                        </div>
+                        <div class="stat">
+                            <strong>92%</strong>
+                            <span>Questions Answered</span>
+                        </div>
+                        <div class="stat">
+                            <strong>24/7</strong>
+                            <span>Moderator Support</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Join the Community</a>
+                </div>
+                <div class="community-image">
+                    <!-- Placeholder for community image -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-cta">
+        <div class="container">
+            <h2>Need More Help?</h2>
+            <p>Our customer support team is available to assist you with any questions or issues.</p>
+            <div class="cta-buttons">
+                <a href="Contact-Us.html" class="btn">Contact Support</a>
+                <a href="FAQs.html" class="btn-outline">Browse FAQs</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

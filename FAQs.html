@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - SparkleBank</title>
+    <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Quick answers to common questions about our services</p>
+        </div>
+    </section>
+
+    <section class="search-faq">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" placeholder="Search FAQs...">
+                <button class="btn">Search</button>
+            </div>
+            <div class="filter-options">
+                <span>Filter by:</span>
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Accounts</button>
+                <button class="filter-btn">Mortgages</button>
+                <button class="filter-btn">Business Loans</button>
+                <button class="filter-btn">Digital Banking</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-main">
+        <div class="container">
+            <div class="faq-categories">
+                <div class="category">
+                    <h2><span>📱</span> Digital Banking</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I reset my online banking password?
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>To reset your password:</p>
+                            <ol>
+                                <li>Go to our login page and click "Forgot Password"</li>
+                                <li>Enter your username and email address</li>
+                                <li>Check your email for a password reset link</li>
+                                <li>Create a new strong password (minimum 12 characters)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is mobile check deposit available?
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Our mobile app allows you to deposit checks easily:</p>
+                            <ul>
+                                <li>Endorse the check with your signature</li>
+                                <li>Select "Deposit" in the app</li>
+                                <li>Take photos of the front and back</li>
+                                <li>Funds typically available within 1 business day</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2><span>🏠</span> Mortgages</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What documents do I need for a mortgage application?
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You'll typically need:</p>
+                            <ul>
+                                <li>2 years of tax returns</li>
+                                <li>Recent pay stubs (last 30 days)</li>
+                                <li>Bank statements (2 months)</li>
+                                <li>Photo ID</li>
+                                <li>Purchase agreement (if you have one)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does the mortgage process take?
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The average timeline is 30-45 days from application to closing:</p>
+                            <ul>
+                                <li>Pre-approval: 1-3 days</li>
+                                <li>Processing: 7-10 days</li>
+                                <li>Underwriting: 10-14 days</li>
+                                <li>Closing: 3-5 days after approval</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2><span>💼</span> Business Banking</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What's the difference between a business loan and line of credit?
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Business Term Loan:</strong></p>
+                            <ul>
+                                <li>Lump sum disbursement</li>
+                                <li>Fixed repayment schedule</li>
+                                <li>Best for one-time investments</li>
+                            </ul>
+                            <p><strong>Business Line of Credit:</strong></p>
+                            <ul>
+                                <li>Reusable credit limit</li>
+                                <li>Pay interest only on what you use</li>
+                                <li>Flexible for ongoing needs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you offer merchant services?
+                            <span class="toggle-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Our merchant services include:</p>
+                            <ul>
+                                <li>Credit/debit card processing</li>
+                                <li>Mobile payment solutions</li>
+                                <li>Online payment gateways</li>
+                                <li>POS system integration</li>
+                                <li>Competitive rates for SparkleBank customers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <h3>Still have questions?</h3>
+                <p>Our customer service team is happy to help with any additional questions you may have.</p>
+                <a href="Contact-Us.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Sparkle Trust Consolidated Bank </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+       <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div>
+                        <button class="link-button">Personal & Business</button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-button">
+                            Intermediaries <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Mortgage Brokers</a>
+                            <a href="#">Financial Advisors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <nav class="desktop-menu">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Savings <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="instant-save.html">Instant Saver</a>
+                                <a href="fixed-saver.html">Fixed Saver</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Mortgages <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Mortgages.html">First Time Buyers</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Business loans <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="Business-loans.html">Business Loans</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                <a href="About-us.html">Our Story</a>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-button">
+                                Help <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="FAQs.html">FAQs</a>
+                                <a href="Contact-Us.html">Contact Us</a>
+                                <a href="Support.html">Support</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="nav-buttons">
+                        <a href="login.html"><button class="button primary-button">Account</button></a>
+                        <button class="menu-button" id="menuButton">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <button class="mobile-menu-item">Savings</button>
+                <button class="mobile-menu-item">Mortgages</button>
+                <button class="mobile-menu-item">Business loans</button>
+                <button class="mobile-menu-item">About us</button>
+                <button class="mobile-menu-item">Help</button>
+                <button class="button primary-button mobile-cta">Get the app</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="https://via.placeholder.com/120x40" alt="Atom Bank Logo">
+            </div>
+            <button id="closeMenuBtn" class="close-menu-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="savings.html">Savings</a></li>
+                <li><a href="mortgages.html">Mortgages</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html" class="btn btn-primary">Open Account</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Our Story</h1>
+                    <p class="hero-subtitle">Building the future of banking, one customer at a time</p>
+                    <p class="hero-description">
+                        Founded in 2014, Atom Bank is the UK's first app-based bank. We're on a mission to redefine what a bank should be, making banking simpler, more transparent, and better value for everyone.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400" alt="Atom Bank Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>From a bold idea to a leading digital bank</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2014</div>
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>Atom Bank was founded with a vision to create a bank that works for customers, not against them. We received our banking license application and began building our revolutionary app-based banking platform.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h3>Banking License</h3>
+                        <p>We became the UK's first app-based bank to be granted a full regulatory banking license by the Bank of England. This was a major milestone in our journey to revolutionize banking.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2016</div>
+                    <div class="timeline-content">
+                        <h3>Launch Day</h3>
+                        <p>Atom Bank officially launched to the public, offering competitive fixed-term savings accounts through our innovative app. We also secured £135 million in funding from investors including BBVA.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2017</div>
+                    <div class="timeline-content">
+                        <h3>Expanding Our Offerings</h3>
+                        <p>We launched our digital mortgage products, bringing our innovative approach to the UK mortgage market. We also introduced business loans to support SMEs across the country.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3>Growing Customer Base</h3>
+                        <p>We celebrated reaching 100,000 customers and £1.3 billion in deposits. Our commitment to offering competitive rates and excellent customer service continued to attract new customers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Award-Winning Banking</h3>
+                        <p>Atom Bank won multiple industry awards for our innovative approach to banking, including "Best Online Savings Provider" and "Best Fixed Rate Mortgage Provider".</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Supporting Customers Through COVID-19</h3>
+                        <p>During the global pandemic, we provided support to our customers through payment holidays and continued to offer competitive savings rates despite economic uncertainty.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Four-Day Working Week</h3>
+                        <p>We became one of the first UK companies to introduce a four-day working week for all employees without reducing pay, demonstrating our commitment to work-life balance and employee wellbeing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Continued Growth</h3>
+                        <p>We reached £3 billion in mortgage lending and continued to expand our product offerings to meet the evolving needs of our customers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Looking to the Future</h3>
+                        <p>Today, we continue to innovate and grow, staying true to our mission of making banking better for everyone. With a focus on cutting-edge technology and customer-centric design, we're building the bank of the future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>At Atom Bank, we're on a mission to change banking for the better. We believe that banking should be simple, transparent, and designed around the customer's needs.</p>
+                    <p>We're committed to:</p>
+                    <ul class="mission-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Offering competitive rates that give real value to our customers</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Providing a seamless digital experience that makes banking easy</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Being transparent in everything we do, with no hidden fees or charges</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Putting our customers at the heart of every decision we make</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Using technology to solve real problems and improve people's financial lives</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mission-image">
+                    <img src="https://via.placeholder.com/500x400" alt="Atom Bank Mission">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Customer First</h3>
+                    <p>We put our customers at the center of everything we do, designing products and services that truly meet their needs.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We're not afraid to challenge the status quo and find new, better ways of doing things.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We're honest, transparent, and always do what's right for our customers and our team.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We work together as one team, valuing diverse perspectives and supporting each other to succeed.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Ambition</h3>
+                    <p>We set bold goals and work tirelessly to achieve them, always striving to be better tomorrow than we are today.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Responsibility</h3>
+                    <p>We take responsibility for our actions and their impact on our customers, our communities, and our planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Leadership Team</h2>
+                <p>Meet the people driving Atom Bank forward</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://via.placeholder.com/300x300" alt="Mark Mullen">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Mark Mullen</h3>
+                        <p class="leader-title">Chief Executive Officer</p>
+                        <p class="leader-bio">Mark has been CEO of Atom Bank since its founding in 2014. With over 25 years of experience in financial services, he previously served as CEO of First Direct.</p>
+                        <div class="leader-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://via.placeholder.com/300x300" alt="David McCarthy">
+                    </div>
+                    <div class="leader-info">
+                        <h3>David McCarthy</h3>
+                        <p class="leader-title">Chief Financial Officer</p>
+                        <p class="leader-bio">David joined Atom Bank in 2015 and has extensive experience in financial services, having previously held senior roles at several major UK banks.</p>
+                        <div class="leader-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://via.placeholder.com/300x300" alt="Edward Twiddy">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Edward Twiddy</h3>
+                        <p class="leader-title">Chief Customer Officer</p>
+                        <p class="leader-bio">Edward is one of Atom's co-founders and has been instrumental in shaping the bank's customer-centric approach since its inception.</p>
+                        <div class="leader-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://via.placeholder.com/300x300" alt="Rachel McLauchlan">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Rachel McLauchlan</h3>
+                        <p class="leader-title">Chief Technology Officer</p>
+                        <p class="leader-bio">Rachel leads Atom's technology strategy, ensuring the bank stays at the cutting edge of digital innovation in the financial services sector.</p>
+                        <div class="leader-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="leadership-cta">
+                <a href="careers.html" class="btn btn-primary">Join Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Awards</h2>
+                <p>Recognition of our commitment to excellence</p>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h3>Best Online Savings Provider</h3>
+                        <p class="award-source">Moneyfacts Awards 2023</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h3>Best Fixed Rate Mortgage Provider</h3>
+                        <p class="award-source">Mortgage Strategy Awards 2022</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h3>Most Innovative Digital Bank</h3>
+                        <p class="award-source">Digital Banking Awards 2022</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h3>Best Banking App</h3>
+                        <p class="award-source">British Bank Awards 2021</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h3>Best Customer Service</h3>
+                        <p class="award-source">Financial Innovation Awards 2021</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-info">
+                        <h3>Most Trusted Bank</h3>
+                        <p class="award-source">Consumer Trust Awards 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section">
+        <div class="container">
+            <div class="community-content">
+                <div class="community-text">
+                    <h2>Our Community Impact</h2>
+                    <p>At Atom Bank, we believe in giving back to the communities we serve. We're committed to making a positive impact through various initiatives and partnerships.</p>
+                    <div class="community-initiatives">
+                        <div class="initiative">
+                            <h3><i class="fas fa-hands-helping"></i> Local Partnerships</h3>
+                            <p>We partner with local organizations to support financial education, entrepreneurship, and community development projects.</p>
+                        </div>
+                        <div class="initiative">
+                            <h3><i class="fas fa-tree"></i> Environmental Responsibility</h3>
+                            <p>We're committed to reducing our environmental footprint and supporting sustainability initiatives in the communities we serve.</p>
+                        </div>
+                        <div class="initiative">
+                            <h3><i class="fas fa-graduation-cap"></i> Education Programs</h3>
+                            <p>We run financial literacy programs to help people of all ages develop the skills and knowledge they need to manage their money effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="community-image">
+                    <img src="https://via.placeholder.com/500x400" alt="Community Impact">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the Atom Bank Community</h2>
+                <p>Experience banking that's designed around you. Open an account today and be part of our story.</p>
+                <div class="cta-actions">
+                    <a href="signup.html" class="btn btn-primary btn-lg">Open an Account</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>7th FORTUNE STREET, EC1Y ORA</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>HELP AND SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">How to complain</a></li>
+                        <li><a href="#">Money Worries</a></li>
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Sparkle Trust Consolidated Bank app</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investor information</a></li>
+                        <li><a href="#">Modern slavery statement</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>NEWS</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                        <li><a href="#">Media assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">COVID-19 risk assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sparkle Trust Consolidated Bank plc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

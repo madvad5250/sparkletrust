@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - Sparkle Trust Consolidated Bank </title>
+    <meta name="description" content="Manage your Atom Bank cards">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="cards.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Sparkle Trust Consolidated Bank </span>
+                </a>
+                <button id="closeSidebar" class="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <img src="images/1_k9kD_GesdpctdqlDhtFCHA@2x.webp" alt="">
+                </div>
+                <div class="user-info">
+                    <h3 id="userDisplayName">Edward Lee Cooksey</h3>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="transactions.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                    </li>
+                    <li class="active">
+                        <a href="cards.html"><i class="fas fa-credit-card"></i> Cards</a>
+                    </li>
+                    <li>
+                        <a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payments</a>
+                    </li>
+                    <li>
+                        <a href="savings.html"><i class="fas fa-piggy-bank"></i> Savings</a>
+                    </li>
+                    <li>
+                        <a href="mortgages.html"><i class="fas fa-home"></i> Mortgages</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                    <li>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="toggleSidebar" class="toggle-sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Cards</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-button">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-button">
+                            <div class="user-avatar small">
+                                <span>JD</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Cards Content -->
+            <div class="dashboard-content">
+                <!-- Cards Overview -->
+                <section class="cards-overview">
+                    <div class="section-header">
+                        <h2>Your Cards</h2>
+                        <button class="button primary-button">
+                            <i class="fas fa-plus"></i> Add New Card
+                        </button>
+                    </div>
+                    
+                    <div class="cards-container">
+                        <!-- Physical Debit Card -->
+                        <div class="card-item">
+                            <div class="card-preview debit-card">
+                                <div class="card-chip"></div>
+                                <div class="card-logo">Atom Bank</div>
+                                <div class="card-number">**** **** **** 4567</div>
+                                <div class="card-details">
+                                    <div class="card-holder">John Doe</div>
+                                    <div class="card-expiry">05/25</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <div class="card-title">
+                                    <h3>Debit Card</h3>
+                                    <span class="card-status active">Active</span>
+                                </div>
+                                <div class="card-meta">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Card Number</span>
+                                        <span class="meta-value">**** 4567</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Expiry Date</span>
+                                        <span class="meta-value">05/25</span>
+                                    </div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="button outline-button small">
+                                        <i class="fas fa-lock"></i> Freeze Card
+                                    </button>
+                                    <button class="button outline-button small">
+                                        <i class="fas fa-cog"></i> Manage
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Virtual Card -->
+                        <div class="card-item">
+                            <div class="card-preview virtual-card">
+                                <div class="card-chip"></div>
+                                <div class="card-logo">Atom Bank</div>
+                                <div class="card-number">**** **** **** 8901</div>
+                                <div class="card-details">
+                                    <div class="card-holder">John Doe</div>
+                                    <div class="card-expiry">12/24</div>
+                                </div>
+                                <div class="virtual-badge">Virtual</div>
+                            </div>
+                            <div class="card-info">
+                                <div class="card-title">
+                                    <h3>Virtual Card</h3>
+                                    <span class="card-status active">Active</span>
+                                </div>
+                                <div class="card-meta">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Card Number</span>
+                                        <span class="meta-value">**** 8901</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Expiry Date</span>
+                                        <span class="meta-value">12/24</span>
+                                    </div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="button outline-button small">
+                                        <i class="fas fa-lock"></i> Freeze Card
+                                    </button>
+                                    <button class="button outline-button small">
+                                        <i class="fas fa-cog"></i> Manage
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Card Settings -->
+                <section class="card-settings">
+                    <div class="section-header">
+                        <h2>Card Settings</h2>
+                    </div>
+                    
+                    <div class="settings-container">
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>Payment Limits</h3>
+                                <p>Manage your daily and transaction limits</p>
+                            </div>
+                            <div class="settings-content">
+                                <div class="limit-item">
+                                    <div class="limit-info">
+                                        <div class="limit-name">Daily ATM Withdrawal</div>
+                                        <div class="limit-value">£500</div>
+                                    </div>
+                                    <div class="limit-slider">
+                                        <input type="range" min="0" max="1000" value="500" class="slider" id="atmSlider">
+                                    </div>
+                                </div>
+                                
+                                <div class="limit-item">
+                                    <div class="limit-info">
+                                        <div class="limit-name">Daily Purchase Limit</div>
+                                        <div class="limit-value">£2,000</div>
+                                    </div>
+                                    <div class="limit-slider">
+                                        <input type="range" min="0" max="5000" value="2000" class="slider" id="purchaseSlider">
+                                    </div>
+                                </div>
+                                
+                                <div class="limit-item">
+                                    <div class="limit-info">
+                                        <div class="limit-name">Online Transaction Limit</div>
+                                        <div class="limit-value">£1,000</div>
+                                    </div>
+                                    <div class="limit-slider">
+                                        <input type="range" min="0" max="3000" value="1000" class="slider" id="onlineSlider">
+                                    </div>
+                                </div>
+                                
+                                <div class="settings-actions">
+                                    <button class="button primary-button">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>Card Controls</h3>
+                                <p>Manage how your card can be used</p>
+                            </div>
+                            <div class="settings-content">
+                                <div class="toggle-item">
+                                    <div class="toggle-info">
+                                        <div class="toggle-name">Contactless Payments</div>
+                                        <div class="toggle-description">Enable or disable contactless payments</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-item">
+                                    <div class="toggle-info">
+                                        <div class="toggle-name">Online Purchases</div>
+                                        <div class="toggle-description">Allow card to be used for online shopping</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-item">
+                                    <div class="toggle-info">
+                                        <div class="toggle-name">International Transactions</div>
+                                        <div class="toggle-description">Allow card to be used abroad</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                
+                                <div class="toggle-item">
+                                    <div class="toggle-info">
+                                        <div class="toggle-name">ATM Withdrawals</div>
+                                        <div class="toggle-description">Allow cash withdrawals from ATMs</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Card Transactions -->
+                <section class="card-transactions">
+                    <div class="section-header">
+                        <h2>Recent Card Transactions</h2>
+                        <a href="transactions.html" class="view-all">View All</a>
+                    </div>
+                    
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Sainsbury's</div>
+                                <div class="transaction-meta">
+                                    <span class="transaction-card">Debit Card **** 4567</span>
+                                    <span class="transaction-time">Today, 08:30 AM</span>
+                                </div>
+                            </div>
+                            <div class="transaction-amount expense">-£42.75</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon entertainment">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Netflix</div>
+                                <div class="transaction-meta">
+                                    <span class="transaction-card">Virtual Card **** 8901</span>
+                                    <span class="transaction-time">Yesterday, 06:15 PM</span>
+                                </div>
+                            </div>
+                            <div class="transaction-amount expense">-£15.99</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon dining">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Pizza Express</div>
+                                <div class="transaction-meta">
+                                    <span class="transaction-card">Debit Card **** 4567</span>
+                                    <span class="transaction-time">Yesterday, 01:20 PM</span>
+                                </div>
+                            </div>
+                            <div class="transaction-amount expense">-£32.50</div>
+                        </div>
+                        
+                        <div class="transaction-item">
+                            <div class="transaction-icon shopping">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Amazon</div>
+                                <div class="transaction-meta">
+                                    <span class="transaction-card">Virtual Card **** 8901</span>
+                                    <span class="transaction-time">09 Apr 2023, 11:45 AM</span>
+                                </div>
+                            </div>
+                            <div class="transaction-amount expense">-£78.50</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="cards.js"></script>
+        <script src="js/auth.js"></script>
+</body>
+</html>
