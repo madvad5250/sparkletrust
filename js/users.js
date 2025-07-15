@@ -38,7 +38,7 @@ const accountData = {
        id: 1,
       description: "Direct Deposit - Inheritance Distribution (xxxxxxx842)",
       amount: 2550000.00,
-      date: "2025-03-13",
+      date: "2025-07-14",
       type: "credit",
       category: "Income",
       account: "Current Account",
@@ -47,7 +47,7 @@ const accountData = {
       id: 2,
       description: "Direct Deposit - Estate Sale Proceeds  (xxxxxxx799)",
       amount: 2050000.50,
-      date: "2025-02-09",
+      date: "2025-07-11",
       type: "credit",
       category: "Income",
       account: "Current Account",
@@ -56,7 +56,7 @@ const accountData = {
       id: 3,
       description: "Bank Transfer - M&A Settlement Y (xxxxxxx725)",
       amount: 1400000.00,
-      date: "2025-01-11",
+      date: "2025-07-10",
       type: "credit",
       category: "Income",
       account: "Current Account",
@@ -67,7 +67,7 @@ const accountData = {
       id: 7,
       description: "Freelance Payment",
       amount: 4841.00,
-      date: "2017-01-09",
+      date: "2025-07-08",
       type: "credit",
       category: "Income",
       account: "Business Account",
@@ -182,9 +182,9 @@ function toggleBalance() {
 
   if (showBalance) {
     balanceIcon.className = "fas fa-eye"
-    totalBalance.textContent = "$5,304,841.50"
-    savingsBalance.textContent = "$5,000,000.00"
-    currentBalance.textContent = "$4,841.50"
+    totalBalance.textContent = "€6,004,441.50"
+    savingsBalance.textContent = "€6,000,000.00"
+    currentBalance.textContent = "€441.50"
   } else {
     balanceIcon.className = "fas fa-eye-slash"
     totalBalance.textContent = "••••••"
@@ -227,7 +227,7 @@ function createTransactionHTML(transaction, detailed = false) {
                 </div>
             </div>
             <div class="transaction-amount ${amountClass}">
-                ${amountPrefix}$${Math.abs(transaction.amount).toFixed(2)}
+                ${amountPrefix}€${Math.abs(transaction.amount).toFixed(2)}
             </div>
         </div>
     `
@@ -249,7 +249,7 @@ function populateAccounts() {
                     </div>
                 </div>
                 <div class="account-balance">
-                    <div class="balance">$${account.balance.toLocaleString()}</div>
+                    <div class="balance" €${account.balance.toLocaleString()}</div>
                     ${account.interestRate ? `<div class="rate">${account.interestRate}% AER</div>` : ""}
                 </div>
             </div>
@@ -292,7 +292,7 @@ function populateAnalytics() {
                 <div class="chart-bar">
                     <div class="chart-bar-fill purple" style="width: ${(month.amount / 3500) * 100}%"></div>
                 </div>
-                <span class="chart-value">$${month.amount}</span>
+                <span class="chart-value">€${month.amount}</span>
             </div>
         </div>
     `,
@@ -309,7 +309,7 @@ function populateAnalytics() {
                 <div class="chart-bar">
                     <div class="chart-bar-fill yellow" style="width: ${category.percentage}%"></div>
                 </div>
-                <span class="chart-value">$${category.amount}</span>
+                <span class="chart-value">€${category.amount}</span>
             </div>
         </div>
     `,
@@ -470,7 +470,7 @@ function handleTransfer(event) {
       // Success
       showSuccess(
         "transfer",
-        `Transfer cannot be completed at the moment $${amount.toFixed(2)} to ${recipient}. Transaction ID: TXN${Date.now()}  "We're sorry, you cannot perform a Transfer on this account at the moment. Please contact a bank representative for assistance`,
+        `Transfer cannot be completed at the moment €${amount.toFixed(2)} to ${recipient}. Transaction ID: TXN${Date.now()}  "We're sorry, you cannot perform a Transfer on this account at the moment. Please contact a bank representative for assistance`,
       )
 
       // Update account balance (simulate)
@@ -512,7 +512,7 @@ function handleDeposit(event) {
 
   setTimeout(() => {
     if (Math.random() > 0.1) {
-      showSuccess("deposit", `Deposit of $${amount.toFixed(2)} via ${method}. Reference: DEP${Date.now()} not successful.`)
+      showSuccess("deposit", `Deposit of €${amount.toFixed(2)} via ${method}. Reference: DEP${Date.now()} not successful.`)
 
       updateAccountBalance(toAccount, amount)
 
@@ -556,7 +556,7 @@ function handleWithdraw(event) {
 
   setTimeout(() => {
     if (Math.random() > 0.15) {
-      showSuccess("withdraw", `Unable to withdraw $${amount.toFixed(2)} via ${method}. Reference: WTH${Date.now()}  We're sorry, you cannot perform withdrawal on this account at the moment. Please contact a bank representative for assistance.`)
+      showSuccess("withdraw", `Unable to withdraw €${amount.toFixed(2)} via ${method}. Reference: WTH${Date.now()}  We're sorry, you cannot perform withdrawal on this account at the moment. Please contact a bank representative for assistance.`)
 
       updateAccountBalance(fromAccount, -amount)
 
@@ -585,7 +585,7 @@ function handleInvest(event) {
   const term = formData.get("term")
 
   if (amount < 100) {
-    showError("invest", "Minimum investment amount is $100.")
+    showError("invest", "Minimum investment amount is €100.")
     isProcessing = false
     return
   }
@@ -596,7 +596,7 @@ function handleInvest(event) {
     if (Math.random() > 0.05) {
       showSuccess(
         "invest",
-        `Unable to invest ${type} investment of $${amount.toFixed(2)} for ${term} months. Reference: INV${Date.now()}  We're sorry, you cannot invest on this account at the moment. Please contact a bank representative for assistance.`,
+        `Unable to invest ${type} investment of €${amount.toFixed(2)} for ${term} months. Reference: INV${Date.now()}  We're sorry, you cannot invest on this account at the moment. Please contact a bank representative for assistance.`,
       )
 
       addNewTransaction({
